@@ -14,7 +14,7 @@ module.exports = function () {
       .pipe($.gulp.dest($.config.root + '/assets/images'));
 
     var cssStream = spriteData.css
-      .pipe($.gulp.dest('./source/style/common'));
+      .pipe($.gulp.dest('./source/style/helpers'));
 
     return $.merge(imgStream, cssStream);
   });

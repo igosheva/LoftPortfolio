@@ -9,6 +9,17 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
+$fav-mount-name: 'fav_mount';
+$fav-mount-x: 120px;
+$fav-mount-y: 0px;
+$fav-mount-offset-x: -120px;
+$fav-mount-offset-y: 0px;
+$fav-mount-width: 256px;
+$fav-mount-height: 256px;
+$fav-mount-total-width: 376px;
+$fav-mount-total-height: 256px;
+$fav-mount-image: 'sprite.png';
+$fav-mount: (120px, 0px, -120px, 0px, 256px, 256px, 376px, 256px, 'sprite.png', 'fav_mount', );
 $viking-name: 'viking';
 $viking-x: 0px;
 $viking-y: 0px;
@@ -16,15 +27,15 @@ $viking-offset-x: 0px;
 $viking-offset-y: 0px;
 $viking-width: 100px;
 $viking-height: 114px;
-$viking-total-width: 100px;
-$viking-total-height: 114px;
+$viking-total-width: 376px;
+$viking-total-height: 256px;
 $viking-image: 'sprite.png';
-$viking: (0px, 0px, 0px, 0px, 100px, 114px, 100px, 114px, 'sprite.png', 'viking', );
-$spritesheet-width: 100px;
-$spritesheet-height: 114px;
+$viking: (0px, 0px, 0px, 0px, 100px, 114px, 376px, 256px, 'sprite.png', 'viking', );
+$spritesheet-width: 376px;
+$spritesheet-height: 256px;
 $spritesheet-image: 'sprite.png';
-$spritesheet-sprites: ($viking, );
-$spritesheet: (100px, 114px, 'sprite.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($fav-mount, $viking, );
+$spritesheet: (376px, 256px, 'sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
 //
