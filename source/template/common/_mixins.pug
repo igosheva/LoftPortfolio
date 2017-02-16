@@ -1,0 +1,7 @@
+mixin ul(className, items)
+    ul(class=`${className}`)
+        each link, item in items
+            li(class=`${className}__item ${className}__item_${item}`)
+                a(class=`${className}__link`, href=`${link}`)
+                    svg(class=`${className}__icon`)
+                        use(xlink:href="assets/images/sprite.svg#icons--" + item)

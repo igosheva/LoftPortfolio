@@ -1,0 +1,68 @@
+.welcome {
+  background: url('../images/background.jpg') no-repeat center/cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.welcome__card {
+  position: absolute;
+  margin: auto;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1800px;
+}
+.card {
+  background-color: rgba(252, 252, 252, .85);
+  text-align: center;
+  color: #455a64;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+.card__content {
+  padding: 40px 66px;
+}
+.card__face {
+  width: 100%;
+  min-width: 141px;
+  max-width: 141px;
+  height: 141px;
+  background: url('../images/face.jpg') no-repeat center/cover;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+.card__name {
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 500;
+  margin-bottom: 9px;
+}
+.card__prof {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: .8;
+  margin-bottom: 35px;
+}
+.social__item {
+  display: inline-block;
+  margin-left: 27px;
+}
+.social__item:first-child {
+  margin-left: 0;
+}
+.social__link {
+  display: block;
+}
+.social__icon {
+  max-width: 32px;
+  max-height: 26px;
+  fill: #00bfa5;
+  opacity: .5;
+}
+.social__icon:hover {
+  opacity: 1;
+}

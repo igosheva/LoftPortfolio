@@ -23,7 +23,7 @@ module.exports = function() {
             sprite: '../sprite.svg'
           },
           example: {
-            dest: '../svgDemo.html'
+            dest: '../template/svgDemo.html'
           }
         }
       }))
