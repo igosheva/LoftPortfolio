@@ -1,8 +1,36 @@
+$mainColor: #00bfa5;
+$textColor: #fff;
+$mainFont: 16px;
+$mediumFont: 500;
+
 .welcome {
   background: url('../images/background.jpg') no-repeat center/cover;
   height: 100%;
   width: 100%;
   position: relative;
+}
+.welcome__inner {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 24px 100px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.welcome__authorization {
+  color: $textColor;
+  border: 1px solid $textColor;
+  border-radius: 5px;
+  overflow: hidden;
+  font-weight: $mediumFont;
+  background-color: inherit;
+  line-height: 2.1;
+  font-size: $mainFont;
+  padding: 5px 27px;
+  cursor: pointer;
+  font-family: 'roboto', sans-serif;
+  align-self: flex-end;
 }
 .welcome__card {
   position: absolute;
@@ -11,7 +39,11 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 1800px;
+}
+.welcome__footer {
+  color: $textColor;
+  font-weight: 300;
+  text-align: center;
 }
 .card {
   background-color: rgba(252, 252, 252, .85);
@@ -31,25 +63,26 @@
   min-width: 141px;
   max-width: 141px;
   height: 141px;
-  background: url('../images/face.jpg') no-repeat center/cover;
+  background: url('../images/face.jpg') no-repeat center/cover, #e2e2e2;
   border-radius: 50%;
-  margin: 0 auto 20px;
+  margin: 0 auto 15px;
 }
 .card__name {
   font-size: 28px;
   line-height: 1.1;
-  font-weight: 500;
-  margin-bottom: 9px;
+  font-weight: $mediumFont;
+  margin-bottom: 5px;
 }
 .card__prof {
-  font-size: 16px;
+  font-size: $mainFont;
   line-height: 1.5;
   opacity: .8;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .social__item {
   display: inline-block;
   margin-left: 27px;
+  vertical-align: middle;
 }
 .social__item:first-child {
   margin-left: 0;
@@ -58,11 +91,55 @@
   display: block;
 }
 .social__icon {
-  max-width: 32px;
+  max-width: 31px;
   max-height: 26px;
-  fill: #00bfa5;
+  fill: $mainColor;
   opacity: .5;
 }
 .social__icon:hover {
   opacity: 1;
+}
+.social__icon_github {
+  max-width: 26px;
+  max-height: 22px;
+}
+.social__icon_in {
+  max-width: 24px;
+  max-height: 22px;
+}
+.social__icon {
+  vertical-align: top;
+}
+.start-nav__list {
+  display: flex;
+}
+.start-nav__item {
+  display: inline-block;
+  background-color: $mainColor;
+  position: relative;
+  flex-grow: 1;
+}
+.start-nav__item:hover {
+  background-color: #009688;
+}
+.start-nav__item:before {
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:-2px;
+  width: 2px;
+  content: '';
+  background-color: #dee3e7;
+  opacity: .5;
+}
+.start-nav__item:before:first-child {
+  content: none;
+}
+.start-nav__link {
+  color: $textColor;
+  padding: 6.5px 32px;
+  line-height: 2;
+  display: block;
+  font-weight: $mediumFont;
+  font-size: $mainFont;
 }

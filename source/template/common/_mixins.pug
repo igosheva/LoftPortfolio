@@ -1,7 +1,13 @@
 mixin ul(className, items)
     ul(class=`${className}`)
         each link, item in items
-            li(class=`${className}__item ${className}__item_${item}`)
+            li(class=`${className}__item`)
                 a(class=`${className}__link`, href=`${link}`)
-                    svg(class=`${className}__icon`)
+                    svg(class=`${className}__icon ${className}__icon_${item}`)
                         use(xlink:href="assets/images/sprite.svg#icons--" + item)
+mixin nav(className, items)
+    nav(class=`${className}`)
+        ul(class=`${className}__list`)
+            each link, item in items
+                li(class=`${className}__item`)
+                    a(class=`${className}__link`, href=`${link}`)=item
