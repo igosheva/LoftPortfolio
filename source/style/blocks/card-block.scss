@@ -1,0 +1,14 @@
+.l-card {
+  background-color: rgba(252, 252, 252, .85);
+  text-align: center;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+  margin: auto;
+  display: block;
+  &__content {
+    padding: 40px 66px;
+  }
+}

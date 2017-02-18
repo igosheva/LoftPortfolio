@@ -1,0 +1,35 @@
+.nav-welcome {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    display: inline-block;
+    background-color: $indexGreen;
+    position: relative;
+    flex-grow: 1;
+    &:hover {
+      background-color: #009688;
+    }
+    &:before {
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:-2px;
+      width: 2px;
+      content: '';
+      background-color: #dee3e7;
+      opacity: .5;
+    }
+    &:before:first-child {
+      content: none;
+    }
+  }
+  &__link {
+    color: $white;
+    padding: 6.5px 32px;
+    line-height: 2;
+    display: block;
+    font-weight: $mediumFont;
+    font-size: $middleFont;
+  }
+}

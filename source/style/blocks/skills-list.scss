@@ -1,0 +1,72 @@
+.c-skills-list__item {
+  margin-right: 40px;
+  display: inline-block;
+}
+.c-skill {
+  position: relative;
+  &__title {
+    position: absolute;
+    @include centered(both);
+    padding: 20px;
+    color: $green;
+    font-size: $smallFont;
+    font-weight: $mediumFont;
+    text-align: center;
+  }
+  &__circle {
+    width: 120px;
+    height: 120px;
+    display: block;
+    fill: none;
+    stroke-width: 20;
+  }
+}
+
+.c-skills__circle-under {
+  stroke: #dfdcd5;
+  fill: none;
+}
+
+.c-skills__circle-above {
+  stroke: $green;
+  stroke-dasharray: .0010 360;
+  transition: all 1s;
+  opacity: .93;
+}
+
+.c-skill__circle:hover
+  .c-skills__circle-above {
+    &--html {
+      stroke-dasharray: 300 360;
+    }
+    &--css {
+      stroke-dasharray: 200 360;
+    }
+    &--js {
+      stroke-dasharray: 100 360;
+    }
+    &--php {
+      stroke-dasharray: 50 360;
+    }
+    &--mySQL {
+      stroke-dasharray: 10 360;
+    }
+    &--npm {
+      stroke-dasharray: 100 360;
+    }
+    &--mongo {
+      stroke-dasharray: 10 360;
+    }
+    &--git {
+      stroke-dasharray: 200 360;
+    }
+    &--gulp {
+      stroke-dasharray: 200 360;
+    }
+    &--webpack {
+      stroke-dasharray: 200 360;
+    }
+    &--bower {
+      stroke-dasharray: 200 360;
+    }
+}

@@ -1,4 +1,4 @@
-//-Style for social icons
+//Basic style for social icons
 .c-social {
   display: inline-block;
   &__item {
@@ -28,5 +28,19 @@
       max-width: 24px;
       max-height: 22px;
     }
+  }
+}
+
+//-Style for social icons in section of welcome
+.c-social--welcome {
+  .c-social__icon {
+    fill: $indexGreen;
+  }
+}
+
+//-Style for social icons in section of hero
+.c-social--hero {
+  .c-social__icon {
+    fill: $white;
   }
 }

@@ -50,7 +50,7 @@
       url('../fonts/roboto/Roboto-Light/Roboto-Light.svg') format('svg'),
       url('../fonts/roboto/Roboto-Light/Roboto-Light.woff') format('woff'),
       url('../fonts/roboto/Roboto-Light/Roboto-Light.ttf') format('truetype');
-  font-weight: 300;
+  font-weight: $lightFont;
   font-style: normal;
 }
 @font-face {
@@ -61,7 +61,7 @@
       url('../fonts/roboto/Roboto-LightItalic/Roboto-LightItalic.svg') format('svg'),
       url('../fonts/roboto/Roboto-LightItalic/Roboto-LightItalic.woff') format('woff'),
       url('../fonts/roboto/Roboto-LightItalic/Roboto-LightItalic.ttf') format('truetype');
-  font-weight: 300;
+  font-weight: $lightFont;
   font-style: italic;
 }
 @font-face {
@@ -72,7 +72,7 @@
       url('../fonts/roboto/Roboto-Medium/Roboto-Medium.svg') format('svg'),
       url('../fonts/roboto/Roboto-Medium/Roboto-Medium.woff') format('woff'),
       url('../fonts/roboto/Roboto-Medium/Roboto-Medium.ttf') format('truetype');
-  font-weight: 500;
+  font-weight: $mediumFont;
   font-style: normal;
 }
 @font-face {
@@ -83,7 +83,7 @@
       url('../fonts/roboto/Roboto-MediumItalic/Roboto-MediumItalic.svg') format('svg'),
       url('../fonts/roboto/Roboto-MediumItalic/Roboto-MediumItalic.woff') format('woff'),
       url('../fonts/roboto/Roboto-MediumItalic/Roboto-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
+  font-weight: $mediumFont;
   font-style: italic;
 }
 @font-face {
@@ -123,12 +123,15 @@
   font-family: 'fontAwesome';
   src: local('☺'),
     url('../fonts/FontAwesome/fontawesome-webfont.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
 
 @mixin roboto() {
   font-family: 'roboto', sans-serif;
+}
+@mixin bernierRegular() {
+  font-family: 'bernierRegular', sans-serif;
 }
 @mixin fontAwesome() {
   font-family: 'fontAwesome', sans-serif;

@@ -1,3 +1,4 @@
+//-Basic style for user-block
 .c-user {
   &__face {
     width: 100%;
@@ -11,7 +12,7 @@
   &__name {
     font-size: 28px;
     line-height: 1.1;
-    font-weight: 500;
+    font-weight: $mediumFont;
     margin-bottom: 5px;
   }
   &__prof {
@@ -19,5 +20,21 @@
     line-height: 1.5;
     opacity: .8;
     margin-bottom: 30px;
+  }
+}
+
+//-Style for user-block in section of welcome
+.c-user--welcome {
+  color: $darkGray;
+}
+
+//-Style for user-block in section of hero
+.c-user--hero {
+  color: $white;
+  .c-user__name {
+    font-size: 35px;
+  }
+  .c-user__prof {
+    font-weight: $lightFont;
   }
 }

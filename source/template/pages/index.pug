@@ -11,19 +11,18 @@ block content
     section.l-section.l-welcome
         .l-welcome__inner.l-section__wrapper
             button.l-welcome__authorization Авторизоваться
-            .l-welcome__card
-                section.l-card
-                    .l-card__content
-                        +user()
-                        +ul('c-social', 'welcome', {
-                            vk: 'https://vk.com/igosh',
-                            github: 'https://github.com/igosheva',
-                            in: 'https://github.com/igosheva'
-                        })
-                    +nav('start-nav', {
-                        'Мои работы': './portfolio.html',
-                        'Обо мне': './about.html',
-                        'Блок': './blog.html'
+            .l-card
+                .l-card__content
+                    +user('welcome')
+                    +ul('c-social', 'welcome', {
+                        vk: 'https://vk.com/igosh',
+                        github: 'https://github.com/igosheva',
+                        in: 'https://github.com/igosheva'
                     })
+                +nav('nav-welcome', {
+                    'Мои работы': './portfolio.html',
+                    'Обо мне': './about.html',
+                    'Блок': './blog.html'
+                })
             footer.l-welcome__footer
                 p © Игошева Анастасия | создано с любовью в LoftSchool | 2017

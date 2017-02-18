@@ -1,0 +1,15 @@
+.c-block-text {
+  color: $darkGray;
+  font-size: $middleFont;
+  line-height: 1.8;
+  &__link {
+    padding: 0 5px;
+    color: $darkGray;
+  }
+  p {
+    padding-bottom: 10px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

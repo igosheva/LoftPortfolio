@@ -1,12 +1,16 @@
 //colors
 $white: #fff;
+$lightGray: #efeee9;
 $beige: #eeebdf;
-$green: #10c1a8;
+$green: #00bfa5;
 $indexGreen: #10c1a8;
 $darkGray: #455a64;
+$sectionTitle: #373e42;
 $mediumFont: 500;
+$regularFont: 400;
+$lightFont: 300;
 $middleFont: 16px;
+$smallFont: 14px;
 
 @import 'blocks/*';
 @import 'helpers/*';
-@import 'pages/*';

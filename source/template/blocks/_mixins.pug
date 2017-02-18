@@ -12,3 +12,23 @@ mixin nav(className, items)
             each link, item in items
                 li(class=`${className}__item`)
                     a(class=`${className}__link`, href=`${link}`)=item
+
+mixin sectionTitle(svg, title)
+    .c-section-title
+        svg.c-section-title__img
+            use(xlink:href="assets/images/sprite.svg#icons--" + svg)
+        h2.c-section-title__text=title
+
+mixin blockTitle(title)
+    h4.c-block-title
+        span.c-block-title__text=title
+
+mixin skillsList(items)
+    ul.l-skills-list
+        each item, modificator in items
+            li.c-skills-list__item
+                .c-skill
+                    svg.c-skill__circle
+                        circle.c-skills__circle-under(cx="50%" cy="50%" r="50")
+                        circle.c-skills__circle-above(class=`c-skills__circle-above--${modificator}` cx="50%" cy="50%" r="50" transform="rotate(-90 60 60)")
+                    h6.c-skill__title=item

@@ -1,0 +1,12 @@
+.l-skills-group {
+  margin-top: 56px;
+  &__item {
+    margin-bottom: 40px;
+  }
+  &__title {
+    font-size: 28px;
+    color: $darkGray;
+    font-weight: $mediumFont;
+    margin-bottom: 20px;
+  }
+}

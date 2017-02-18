@@ -1,0 +1,30 @@
+@import '../helpers/_mixins';
+@import '../helpers/fonts';
+
+.c-block-title {
+  color: $darkGray;
+  font-size: 35px;
+  line-height: 1.17;
+  @include bernierRegular;
+  text-align: center;
+  font-weight: $regularFont;
+  margin-bottom: 35px;
+  &__text {
+    position: relative;
+    &:before, &:after {
+      background-color: $sectionTitle;
+      content: '';
+      width: 22px;
+      height: 5px;
+      opacity: .2;
+      position: absolute;
+      @include centered(y);
+    }
+    &:before {
+      left: -40px;
+    }
+    &:after {
+      right: -40px;
+    }
+  }
+}
