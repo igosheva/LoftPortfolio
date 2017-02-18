@@ -1,0 +1,12 @@
+mixin hero()
+    section.l-section.l-hero
+        .l-section__wrapper.l-hero__inner
+            +ul('c-social', 'hero', {vk:'https://vk.com/igosh', github:'https://github.com/igosheva', in:'https://github.com/igosheva'})
+            .c-hamburger
+                a.c-hamburger__content
+            .l-hero__content
+                svg.l-hero__portfolio(viewBox="0 0 1175.495 313.961")
+                    use(xlink:href="assets/images/sprite.svg#icons--portfolio_header")
+                +user('hero')
+            svg.l-hero__arrow.js-hero-arrow(viewBox="0 0 25.18 16.164")
+                use(xlink:href="assets/images/sprite.svg#icons--arrow_down")
