@@ -1,7 +1,45 @@
 extends ../_template
 
 block variables
-  - var title = 'IGOSHEVA|Portfolio'
+  -
+      var
+          title = 'IGOSHEVA|Portfolio',
+          description = 'IGOSHEVA|Portfolio of web-developer Igosheva Nastasia',
+          keywords = 'website of web-developer Igosheva Nastasia, front-ent, portfolio, resume'
 
 block content
-  h1 It's some another page
+    .wrapper
+        section.l-section.l-hero
+            .l-section__wrapper.l-hero__inner.clearfix
+                +ul('c-social', 'portfolio', {vk:'https://vk.com/igosh', github:'https://github.com/igosheva', in:'https://github.com/igosheva'})
+                .c-hamburger
+                    a.c-hamburger__content
+                svg.l-hero__portfolio(viewBox="0 0 1175.495 313.961")
+                    use(xlink:href="assets/images/sprite.svg#icons--portfolio_header")
+                .l-hero__content
+                    +user('hero')
+        section.l-section.l-about
+            .l-about__col.l-about__col_left
+                svg.c-about__triangle
+                .c-section-title
+                .c-about
+                    .c-about__pic
+                    .c-block-title
+                    .c-block-text
+
+            .l-about__col.l-about__col_right
+                .l-skills
+                    .c-block-title
+                    .l-skills__text
+                        p
+                        p
+                        p
+                    ul.l-skills-group
+                        li.l-skills-group__item
+                            .c-skills-group__title Frontend
+                            ul.l-skills-list
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+        section.l-section.l-map

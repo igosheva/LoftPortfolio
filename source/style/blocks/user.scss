@@ -1,0 +1,23 @@
+.c-user {
+  &__face {
+    width: 100%;
+    min-width: 141px;
+    max-width: 141px;
+    height: 141px;
+    background: url('../images/face.jpg') no-repeat center/cover, #e2e2e2;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+  }
+  &__name {
+    font-size: 28px;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  &__prof {
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: .8;
+    margin-bottom: 30px;
+  }
+}

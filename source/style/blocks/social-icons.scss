@@ -1,0 +1,32 @@
+//-Style for social icons
+.c-social {
+  display: inline-block;
+  &__item {
+    display: inline-block;
+    margin-left: 27px;
+    vertical-align: middle;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &__link {
+    display: block;
+  }
+  &__icon {
+    max-width: 31px;
+    max-height: 26px;
+    opacity: .5;
+    vertical-align: top;
+    &:hover {
+      opacity: 1;
+    }
+    &_github {
+      max-width: 26px;
+      max-height: 22px;
+    }
+    &_in {
+      max-width: 24px;
+      max-height: 22px;
+    }
+  }
+}

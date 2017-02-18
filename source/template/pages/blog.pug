@@ -1,7 +1,12 @@
 extends ../_template
 
 block variables
-  - var title = 'IGOSHEVA|My blog'
+  -
+      var
+          title = 'IGOSHEVA|My blog',
+          description = 'IGOSHEVA|Blog of web-developer Igosheva Nastasia',
+          keywords = 'website of web-developer Igosheva Nastasia, front-ent, blog'
 
 block content
-  h1 It's some another page
+    .wrapper
+        include ../blocks/user

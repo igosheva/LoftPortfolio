@@ -13,7 +13,8 @@ global.$ = {
   del: require('del'),
   merge: require('merge-stream'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')()
+  gp: require('gulp-load-plugins')(),
+  sassGlob: require('gulp-sass-glob')
 };
 
 $.path.task.forEach(function(taskPath) {

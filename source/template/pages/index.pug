@@ -3,9 +3,27 @@ extends ../_template
 block variables
   -
     var
-        title = 'Home page',
-        description = 'Home page',
-        keywords = 'Home page'
+        title = 'IGOSHEVA|Home',
+        description = 'IGOSHEVA|Homepage of website of web-developer Igosheva Nastasia',
+        keywords = 'website of web-developer Igosheva Nastasia, front-ent'
 
 block content
-  include ../common/_welcome
+    section.l-section.l-welcome
+        .l-welcome__inner.l-section__wrapper
+            button.l-welcome__authorization Авторизоваться
+            .l-welcome__card
+                section.l-card
+                    .l-card__content
+                        +user()
+                        +ul('c-social', 'welcome', {
+                            vk: 'https://vk.com/igosh',
+                            github: 'https://github.com/igosheva',
+                            in: 'https://github.com/igosheva'
+                        })
+                    +nav('start-nav', {
+                        'Мои работы': './portfolio.html',
+                        'Обо мне': './about.html',
+                        'Блок': './blog.html'
+                    })
+            footer.l-welcome__footer
+                p © Игошева Анастасия | создано с любовью в LoftSchool | 2017
