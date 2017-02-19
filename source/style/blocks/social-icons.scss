@@ -44,3 +44,15 @@
     fill: $white;
   }
 }
+
+//-Style for social icons in section of hero
+.c-social--footer {
+  .c-social__item {
+    margin-left: 10px;
+  }
+  .c-social__icon {
+    fill: $white;
+    max-width: 35px;
+    max-height: 35px;
+  }
+}
