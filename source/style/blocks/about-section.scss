@@ -1,34 +1,20 @@
+@import '../helpers/_mixins';
+
 .l-about {
   display: flex;
 }
 .l-about__col {
-  width: 50%;
-  position: relative;
   padding-bottom: 49px;
   &_left {
-    background: $lightGray;
-    .l-about__triangle {
-      left: 0;
-      fill: $lightGray;
-    }
+    @include columns(left);
   }
   &_right {
-    background: $beige;
-    .l-about__triangle {
-      right: 0;
-      fill: $beige;
-    }
+    @include columns(right);
   }
 }
-.l-about__triangle {
-  display: block;
-  width: 100%;
-  height: 110px;
-  position: absolute;
-  bottom: 100%;
-}
+
 .l-about__wrapper {
-  max-width: 900px;
+  @include columns-wrapper();
   &--left {
     margin-left: auto;
     display: flex;
@@ -47,9 +33,7 @@
   &__pic {
     height: 390px;
     width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include background();
     margin-bottom: 40px;
   }
 }

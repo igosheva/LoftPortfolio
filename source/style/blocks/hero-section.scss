@@ -7,25 +7,19 @@
   padding: 28px 30px;
   &:after {
     background-color: rgba(1, 102, 114, .3);
-    bottom:0;
     content: '';
-    left:0;
-    position: absolute;
-    right:0;
-    top:0;
+    @include centered(max);
     z-index: -1;
   }
   &__inner {
     z-index: 2;
   }
   &__portfolio {
-    left:0;
     margin: 0 auto;
     max-height: 313px;
     max-width: 1176px;
     opacity: .06;
-    position: absolute;
-    right:0;
+    @include centered(stretchX);
     top:-10px;
     width: 100%;
     fill: $white;
@@ -35,17 +29,5 @@
     text-align: center;
     left:0;
     @include centered(y);
-  }
-  &__arrow {
-    position: absolute;
-    @include centered(x);
-    display: block;
-    opacity: .7;
-    bottom: 70px;
-    fill: $white;
-    max-width: 26px;
-    max-height: 16px;
-    cursor: pointer;
-    z-index: 111;
   }
 }

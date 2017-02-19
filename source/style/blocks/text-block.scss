@@ -4,7 +4,11 @@
   line-height: 1.8;
   &__link {
     padding: 0 5px;
-    color: $darkGray;
+    color: $blue;
+    text-decoration: underline;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
   }
   p {
     padding-bottom: 10px;

@@ -1,0 +1,29 @@
+@import '../helpers/_mixins';
+
+.l-works {
+  position: relative;
+  background-color: $middleGray;
+}
+
+.l-works__content {
+  display: flex;
+}
+.l-works__col {
+  &_left {
+    @include columns(left);
+  }
+  &_right {
+    @include columns(right);
+  }
+}
+
+.l-works__wrapper {
+  @include columns-wrapper();
+  &--left {
+    margin-left: auto;
+    padding: 20px;
+  }
+  &--right {
+    margin-right: auto;
+  }
+}

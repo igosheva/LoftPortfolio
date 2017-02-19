@@ -10,25 +10,20 @@
     height: 5px;
     position: relative;
     width: 40px;
-    &:before {
+    &:before, &:after {
       background-color: $white;
       border-radius: 2.5px;
       content: '';
       height: 5px;
       left: 0;
       position: absolute;
-      top: -15px;
       width: 40px;
     }
+    &:before {
+      top: -15px;
+    }
     &:after {
-      background-color: $white;
-      border-radius: 2.5px;
-      content: '';
-      height: 5px;
-      left: 0;
-      position: absolute;
       top: 15px;
-      width: 40px;
     }
   }
 }

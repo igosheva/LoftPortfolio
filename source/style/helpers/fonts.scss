@@ -28,7 +28,7 @@
       url('../fonts/roboto/Roboto-Bold/Roboto-Bold.svg') format('svg'),
       url('../fonts/roboto/Roboto-Bold/Roboto-Bold.woff') format('woff'),
       url('../fonts/roboto/Roboto-Bold/Roboto-Bold.ttf') format('truetype');
-  font-weight: bold;
+  font-weight: $boldFont;
   font-style: normal;
 }
 @font-face {
@@ -39,7 +39,7 @@
       url('../fonts/roboto/Roboto-BoldItalic/Roboto-BoldItalic.svg') format('svg'),
       url('../fonts/roboto/Roboto-BoldItalic/Roboto-BoldItalic.woff') format('woff'),
       url('../fonts/roboto/Roboto-BoldItalic/Roboto-BoldItalic.ttf') format('truetype');
-  font-weight: bold;
+  font-weight: $boldFont;
   font-style: italic;
 }
 @font-face {

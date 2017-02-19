@@ -11,13 +11,12 @@ block content
         +hero()
         section.l-section.l-about
             .l-about__col.l-about__col_left
-                svg.l-about__triangle(viewbox="0 0 1000 110" preserveAspectRatio="none")
-                    polygon(points="0,0 0,110 1000, 110")
+                +leftTriangle('about')
                 .l-about__wrapper.l-about__wrapper--left
-                    +sectionTitle('about_header', 'Обо мне')
+                    +sectionTitle('about_header', 'Обо мне', 'about')
                     .c-about
                         .c-about__pic(style="background-image: url('assets/images/face.jpg')")
-                        +blockTitle('Кто я')
+                        +blockTitle('Кто я', 'about')
                         .c-block-text
                             p
                                 | Меня зовут Анастасия, мне 23 года, я из Сибири, но проживаю в г.Санкт-Петербург.
@@ -33,11 +32,10 @@ block content
                                 a.c-block-text__link(href='https://loftschool.com/', target='_blank') LoftSchool.
                             p Я постоянно углубляю свои знания в предметной области, используя самые актуальные книги и онлайн-ресурсы.
             .l-about__col.l-about__col_right
-                svg.l-about__triangle(viewbox="0 0 1000 110" preserveAspectRatio="none")
-                    polygon(points="0,110 1000,110 1000,0")
+                +rightTriangle('about')
                 .l-about__wrapper.l-about__wrapper--right
                     .l-skills
-                        +blockTitle('Чем я могу быть вам полезен')
+                        +blockTitle('Чем я могу быть Вам полезна', 'skills')
                         .c-block-text
                             p
                                 | Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не
@@ -68,7 +66,7 @@ block content
         section.l-section.l-map
             .c-map#map
             .l-contacts
-                +blockTitle('Контакты')
+                +blockTitle('Контакты', 'contacts')
                 ul.c-contacts
                     li.c-contacts__item
                         a.c-contacts__link.c-contacts__link--skype(href='skype:anasteziya525') anastaziya525

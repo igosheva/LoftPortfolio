@@ -1,0 +1,25 @@
+.c-triangle {
+  display: block;
+  height: 110px;
+  position: absolute;
+  bottom: 100%;
+  &__left {
+    left: 0;
+  }
+  &__right {
+    right: 0;
+  }
+}
+.c-triangle--about {
+  width: 100%;
+  &.c-triangle__left {
+    fill: $lightGray;
+  }
+  &.c-triangle__right {
+    fill: $beige;
+  }
+}
+.c-triangle--works {
+  width: 50%;
+  fill: $middleGray;
+}

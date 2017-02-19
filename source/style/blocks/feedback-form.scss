@@ -1,0 +1,81 @@
+@import '../helpers/fonts';
+
+.c-feedback {
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 70px;
+  &__inner {
+    padding: 30px 20px 20px;
+    z-index: 0;
+    position: relative;
+    &:after {
+      content: '';
+      background-image: url('../images/feedback-form.jpg');
+      @include background();
+      @include centered(max);
+      z-index: -1;
+      opacity: .5;
+    }
+  }
+}
+
+.c-feedback-form {
+  &__item {
+    border: none;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__input, &__textarea {
+    width: 100%;
+    border: none;
+    background-color: $white;
+    color: $sectionTitle;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 16px 20px;
+    line-height: 1;
+    @include roboto;
+    outline: none;
+    font-size: $middleFont;
+    &::-webkit-input-placeholder {
+      color: rgba(55, 62, 66, .5);
+      @include roboto;
+    }
+    &:focus {
+      outline: none;
+      &::-webkit-input-placeholder {
+        opacity: 0;
+      }
+    }
+  }
+  &__textarea {
+    height: 140px;
+  }
+}
+.c-feedback-buttons {
+  display: flex;
+  width:100%;
+}
+.c-feedback-button {
+  width:50%;
+  color: $white;
+  display: inline-block;
+  border: none;
+  outline:none;
+  padding: 15px;
+  font-size: $middleFont;
+  cursor: pointer;
+  &--send {
+    background-color: rgba(0, 191, 165, .85);
+  }
+  &--clear {
+    background-color: rgba(0, 191, 165, .3);
+  }
+}

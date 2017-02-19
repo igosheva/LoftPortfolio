@@ -8,7 +8,6 @@
   align-self: flex-start;
   &__img {
     opacity: .07;
-    max-width: 357px;
     width:100%;
   }
   &__text {
@@ -34,5 +33,20 @@
     &:after {
       right: -40px;
     }
+  }
+}
+
+.c-section-title--about {
+  .c-section-title__img {
+    width:auto;
+  }
+}
+.c-section-title--works {
+  padding-bottom: 24px;
+}
+.c-section-title--reviews {
+  margin-bottom: 68px;
+  .c-section-title__text {
+    max-width: 275px;
   }
 }

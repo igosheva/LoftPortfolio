@@ -24,4 +24,41 @@
     top: 50%;
     transform: translateY(-50%);
   }
+  @if $axis == 'max' {
+    bottom:0;
+    left:0;
+    right:0;
+    top:0;
+  }
+  @if $axis == 'stretchX' {
+    left:0;
+    right:0;
+  }
+  @if $axis == 'stretchY' {
+    top:0;
+    bottom:0;
+  }
+}
+
+@mixin columns($axis: 'left') {
+  width: 50%;
+  position: relative;
+
+  @if ($axis == 'left') {
+    background: $lightGray;
+  }
+
+  @if $axis == 'right' {
+    background: $beige;
+  }
+}
+
+@mixin columns-wrapper() {
+  max-width: 900px;
+}
+
+@mixin background() {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

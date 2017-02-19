@@ -1,3 +1,4 @@
+/*
 $(function () {
 	var Maps;
 	var Routes;
@@ -78,3 +79,4 @@ $(function () {
 	};
 	App.init();
 });
+*/

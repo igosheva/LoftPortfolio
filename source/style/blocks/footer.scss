@@ -1,17 +1,13 @@
 .l-footer {
   background-color: rgba(55, 62, 66, .85);
-  position: absolute;
   bottom: 0;
-  left:0;
-  right:0;
+  @include centered(stretchX);
   &__top {
     position: relative;
     &:after {
       content: '';
-      position: absolute;
       bottom: 1px;
-      left:0;
-      right:0;
+      @include centered(stretchX);
       height: 1px;
       width:100%;
       background-color: rgba(255, 255, 255, .1);
@@ -24,7 +20,7 @@
     padding: 17px 30px 20px;
   }
   &__bottom {
-    padding: 15px 30px 17px;
+    padding: 16px 30px 10px;
     color: $white;
     font-weight: $lightFont;
     line-height: 1.5;
@@ -49,5 +45,8 @@
     color: $white;
     font-size: $middleFont;
     font-weight: $mediumFont;
+    &:hover, &:focus {
+      color: $green;
+    }
   }
 }

@@ -10,3 +10,62 @@ block variables
 block content
     .wrapper
         +hero()
+        section.l-section.l-works
+            +leftTriangle('works')
+            +rightTriangle('works')
+            +sectionTitle('works_header', 'Мои работы', 'works')
+            .l-works__content
+                .l-works__col_left
+                    .l-works__wrapper.l-works__wrapper--left
+                        .c-work
+                            +blockTitle('Личный сайт Игошевой Анастасии')
+                            p.c-work__tehnologes HTML5, CSS3, PUG, STYLUS, JAVASCRIPT
+                            a.c-work__link(href='https://www.igosheva-am.ru', target="_blank")
+                                span.c-work__link-text Посмотреть сайт
+                                    svg.c-work__link-icon
+                                        use(xlink:href="assets/images/sprite.svg#icons--link")
+                .l-works__col_right
+                    .c-slider.l-works__wrapper.l-works__wrapper--right
+                        .c-slider__image-wrapper
+                            .c-slider__image(style='background-image: url(assets/images/resume.jpg)')
+                        ul.c-slider-list
+                            li.c-slider-list__item
+                                .c-slider-list__image(style='background-image: url(assets/images/jason-wood.png)')
+                                a.c-slider-arrow
+                                    i.c-slider-arrow__img.c-slider-arrow__img--bottom
+                            li.c-slider-list__item
+                                .c-slider-list__image(style='background-image: url(assets/images/fiato.jpg)')
+                                a.c-slider-arrow
+                                    i.c-slider-arrow__img.c-slider-arrow__img--top
+        section.l-section.l-reviews
+            +sectionTitle('about_header', 'Что обо мне говорят', 'reviews')
+            ul.l-reviews-list
+                li.c-reviews-item
+                    i.c-reviews-item__icon 
+                    p.c-reviews-item__text
+                        |Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых
+                        |тяжелых испытаний и бессонных ночей!
+                    .c-reviews-hero
+                        img.c-reviews-hero__img(src='assets/images/dmitriy.jpg')
+                        .c-reviews-hero__content
+                            p.c-reviews-hero__name Ковальчук Дмитрий
+                            p основатель Loftschool
+                li.c-reviews-item
+                    i.c-reviews-item__icon 
+                    p.c-reviews-item__text
+                        |Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых
+                        |браузерах!
+                    .c-reviews-hero
+                        img.c-reviews-hero__img(src='assets/images/vladimir.jpg')
+                        .c-reviews-hero__content
+                            p.c-reviews-hero__name Сабанцев Владимир
+                            p преподаватель
+            .c-feedback
+                .c-feedback__inner
+                    +blockTitle('Связаться со мной', 'feedback')
+                    +form('c-feedback-form', {'Имя':'text', 'Email': 'email'},{'Ваше сообщение':'textarea'})
+                .c-feedback-buttons
+                    button.c-feedback-button.c-feedback-button--send Отправить
+                    button.c-feedback-button.c-feedback-button--clear Очистить
+            +arrow('feedback')
+        +footer()

@@ -1,6 +1,7 @@
 //-Style for welcome section
 .l-welcome {
-  background: url('../images/bg-main.jpg') no-repeat center/cover;
+  background-image: url('../images/bg-main.jpg');
+  @include background();
   height: 100%;
   width: 100%;
   &__inner {
@@ -24,6 +25,10 @@
     @include roboto;
     align-self: flex-end;
     margin-bottom: 20px;
+    &:hover, &:focus {
+      background-color: $white;
+      color: $green;
+    }
   }
   &__footer {
     color: $white;
