@@ -42,11 +42,39 @@
   }
 }
 .c-section-title--works {
-  padding-bottom: 24px;
+  padding-bottom: 30px;
 }
 .c-section-title--reviews {
-  margin-bottom: 68px;
+  margin-bottom: 58px;
   .c-section-title__text {
     max-width: 275px;
+  }
+}
+.c-section-title--blog {
+  margin-bottom: 14px;
+  .c-section-title__img {
+    fill: $white;
+    @include centered(both);
+    width:303px;
+    top:80%;
+  }
+  .c-user__face {
+    margin: 0 auto 20px;
+  }
+  .c-section-title__text {
+    color: $white;
+    position: relative;
+    transform: none;
+    left: 0;
+    top:0;
+    margin-bottom: 4px;
+    &:before, &:after {
+      background-color: $white;
+    }
+  }
+  .c-section-title__extra {
+    color: $white;
+    font-size: $middleFont;
+    letter-spacing: -0.5px;
   }
 }

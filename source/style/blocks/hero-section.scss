@@ -4,7 +4,6 @@
   position: relative;
   width: 100%;
   z-index: 0;
-  padding: 28px 30px;
   &:after {
     background-color: rgba(1, 102, 114, .3);
     content: '';
@@ -13,6 +12,7 @@
   }
   &__inner {
     z-index: 2;
+    padding: 28px 30px;
   }
   &__portfolio {
     margin: 0 auto;
@@ -29,5 +29,19 @@
     text-align: center;
     left:0;
     @include centered(y);
+    top:46%;
+  }
+}
+
+.l-hero--blog {
+  height: 383px;
+  padding: 14px 30px;
+  .l-hero__inner {
+    max-width: 1140px;
+  }
+  .l-hero__content {
+    position: relative;
+    transform: none;
+    margin-top: 30px;
   }
 }

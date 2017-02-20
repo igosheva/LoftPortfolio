@@ -19,17 +19,18 @@
     margin-left: auto;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0 20px 20px;
   }
   &--right {
     margin-right: auto;
-    padding: 20px 40px;
+    padding: 10px 40px 20px;
   }
 }
 
 .c-about {
   max-width: 443px;
   width: 51.55%;
+  margin-top: 20px;
   &__pic {
     height: 390px;
     width: 100%;

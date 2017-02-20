@@ -8,7 +8,7 @@
   overflow: hidden;
   margin-bottom: 70px;
   &__inner {
-    padding: 30px 20px 20px;
+    padding: 30px 20px 16px;
     z-index: 0;
     position: relative;
     &:after {
@@ -39,7 +39,7 @@
     color: $sectionTitle;
     border-radius: 4px;
     overflow: hidden;
-    padding: 16px 20px;
+    padding: 12px 20px;
     line-height: 1;
     @include roboto;
     outline: none;
@@ -69,7 +69,7 @@
   display: inline-block;
   border: none;
   outline:none;
-  padding: 15px;
+  padding: 14px;
   font-size: $middleFont;
   cursor: pointer;
   &--send {

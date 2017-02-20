@@ -2,13 +2,13 @@
 @import '../helpers/fonts';
 
 .c-block-title {
-  margin-bottom: 35px;
   position: relative;
   display: inline-block;
   padding: 0 40px;
   &__wrapper {
     display: block;
     text-align: center;
+    margin-bottom: 35px;
   }
   &__text {
     display: inline-block;
@@ -37,8 +37,17 @@
 }
 
 .c-block-title--skills {
+  .c-block-title__wrapper {
+    margin-bottom: 25px;
+  }
   .c-block-title__text {
     max-width: 220px;
     width:100%;
+  }
+}
+
+.c-block-title--contacts {
+  .c-block-title__wrapper {
+    margin-bottom: 30px;
   }
 }

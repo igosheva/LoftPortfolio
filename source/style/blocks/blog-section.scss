@@ -1,0 +1,69 @@
+@import '../helpers/fonts';
+
+.l-blog {
+  position: relative;
+  background-color: $white;
+  padding: 66px 180px 210px;
+}
+.l-blog-inner {
+  display: flex;
+  font-size: $middleFont;
+  color: #455a64;
+  line-height: 1.62;
+  position: relative;
+}
+.l-blog-nav {
+  width:17.8%;
+  margin-right: 7.3%;
+  text-align: right;
+  &__item {
+    padding-right: 20px;
+    margin-bottom: 20px;
+    line-height: 3;
+    &.active {
+      font-weight: $boldFont;
+      color: $green;
+      border-right: 3px solid $green;
+    }
+  }
+  &__link {
+    line-height: 1.6;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+.l-blog-content {
+  width:56%;
+  &__data {
+    padding-bottom: 70px;
+    border-bottom: 5px solid rgba(55, 62, 66, .07);
+    margin-bottom: 70px;
+    &:last-child{
+      padding-bottom: 0;
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    font-weight: $regularFont;
+    color: $darkGray;
+    font-size: 35px;
+    line-height: 1;
+    @include bernierRegular;
+    margin-bottom: 18px;
+  }
+  &__date {
+    font-size: $middleFont;
+    color: $green;
+    margin-bottom: 16px;
+  }
+  &__text {
+      p {
+        margin-bottom: 12px;
+        display: block;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+}
