@@ -2,7 +2,7 @@ mixin ul(className, modificator, items)
     ul(class=`${className} ${className}--${modificator}`)
         each link, item in items
             li(class=`${className}__item`)
-                a(class=`${className}__link`, href=`${link}`)
+                a(class=`${className}__link`, href=`${link}`, target='_blank')
                     svg(class=`${className}__icon ${className}__icon_${item}`)
                         use(xlink:href="assets/images/sprite.svg#icons--" + item)
 
@@ -34,12 +34,12 @@ mixin skillsList(items)
                     h6.c-skill__title=item
 
 mixin leftTriangle(modificator)
-    svg.c-triangle.c-triangle__left(class=`c-triangle--${modificator}` viewbox="0 0 1000 110" preserveAspectRatio="none")
-        polygon(points="0,0 0,110 1000, 110")
+    svg.c-triangle.c-triangle__left(class=`c-triangle--${modificator}` viewbox="0 0 1000 150" preserveAspectRatio="none")
+        polygon(points="0,0 0,150 1000, 150")
 
 mixin rightTriangle(modificator)
-    svg.c-triangle.c-triangle__right(class=`c-triangle--${modificator}` viewbox="0 0 1000 110" preserveAspectRatio="none")
-        polygon(points="0,110 1000,110 1000,0")
+    svg.c-triangle.c-triangle__right(class=`c-triangle--${modificator}` viewbox="0 0 1000 150" preserveAspectRatio="none")
+        polygon(points="0,150 1000,150 1000,0")
 
 mixin arrow(modificator)
     svg.c-arrow(class=`c-arrow--${modificator}` viewBox="0 0 25.18 16.164")

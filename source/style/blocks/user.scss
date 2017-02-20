@@ -7,25 +7,33 @@
     height: 141px;
     background: url('../images/face.jpg') no-repeat center/cover, #e2e2e2;
     border-radius: 50%;
-    margin: 0 auto 15px;
+    margin: 0 auto 25px;
   }
   &__name {
     font-size: 28px;
     line-height: 1.1;
     font-weight: $mediumFont;
-    margin-bottom: 5px;
   }
   &__prof {
     font-size: 16px;
     line-height: 1.5;
     opacity: .8;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
 //-Style for user-block in section of welcome
 .c-user--welcome {
   color: $darkGray;
+  .c-user__face {
+    margin: 0 auto 15px;
+  }
+  .c-user__name {
+    margin-bottom: 7px;
+  }
+  .c-user__prof {
+    margin-bottom: 30px;
+  }
 }
 
 //-Style for user-block in section of hero

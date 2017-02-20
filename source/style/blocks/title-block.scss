@@ -36,16 +36,20 @@
   }
 }
 
-.c-block-title--skills {
+.l-skills {
   .c-block-title__wrapper {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
   .c-block-title__text {
     max-width: 220px;
     width:100%;
   }
 }
-
+.c-about {
+  .c-block-title__wrapper {
+    margin-bottom: 20px;
+  }
+}
 .c-block-title--contacts {
   .c-block-title__wrapper {
     margin-bottom: 30px;

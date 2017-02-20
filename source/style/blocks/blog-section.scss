@@ -3,7 +3,7 @@
 .l-blog {
   position: relative;
   background-color: $white;
-  padding: 66px 180px 210px;
+  padding: 66px 110px 210px;
 }
 .l-blog-inner {
   display: flex;
@@ -16,10 +16,11 @@
   width:17.8%;
   margin-right: 7.3%;
   text-align: right;
+  padding-top: 5px;
   &__item {
     padding-right: 20px;
     margin-bottom: 20px;
-    line-height: 3;
+    line-height: 2.6;
     &.active {
       font-weight: $boldFont;
       color: $green;
@@ -35,9 +36,9 @@
 .l-blog-content {
   width:56%;
   &__data {
-    padding-bottom: 70px;
+    padding-bottom: 65px;
     border-bottom: 5px solid rgba(55, 62, 66, .07);
-    margin-bottom: 70px;
+    margin-bottom: 65px;
     &:last-child{
       padding-bottom: 0;
       border-bottom: none;
@@ -55,15 +56,16 @@
   &__date {
     font-size: $middleFont;
     color: $green;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   &__text {
-      p {
-        margin-bottom: 12px;
-        display: block;
-        &:last-child {
-          margin-bottom: 0;
-        }
+    line-height: 1.64;
+    p {
+      margin-bottom: 10px;
+      display: block;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
+  }
 }

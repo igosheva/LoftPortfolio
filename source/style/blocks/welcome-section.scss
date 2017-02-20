@@ -25,6 +25,8 @@
     @include roboto;
     align-self: flex-end;
     margin-bottom: 20px;
+    outline: none;
+    transition: all .5s;
     &:hover, &:focus {
       background-color: $white;
       color: $green;

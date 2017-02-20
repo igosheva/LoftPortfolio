@@ -3,10 +3,15 @@
   cursor: pointer;
   float: right;
   padding: 15.5px 0;
+  opacity: .5;
+  transition: all .5s;
+  &:hover {
+    opacity: 1;
+  }
   &__content {
     background-color: $white;
-    border-radius: 2.5px;
-    display: block;
+  border-radius: 2.5px;
+  display: block;
     height: 5px;
     position: relative;
     width: 40px;

@@ -26,6 +26,13 @@
     padding: 10px 40px 20px;
   }
 }
+.l-about__title {
+  position: relative;
+  text-align: center;
+  flex-grow:1;
+  align-self: flex-start;
+  min-height: 50px;
+}
 
 .c-about {
   max-width: 443px;

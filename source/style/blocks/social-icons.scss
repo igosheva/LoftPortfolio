@@ -17,6 +17,7 @@
     max-height: 26px;
     opacity: .5;
     vertical-align: top;
+    transition: all .5s;
     &:hover {
       opacity: 1;
     }

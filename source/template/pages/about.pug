@@ -13,7 +13,8 @@ block content
             .l-about__col.l-about__col_left
                 +leftTriangle('about')
                 .l-about__wrapper.l-about__wrapper--left
-                    +sectionTitle('about_header', 'Обо мне', 'about')
+                    .l-about__title
+                        +sectionTitle('about_header', 'Обо мне', 'about')
                     .c-about
                         .c-about__pic(style="background-image: url('assets/images/face.jpg')")
                         +blockTitle('Кто я', 'about')
@@ -35,7 +36,7 @@ block content
                 +rightTriangle('about')
                 .l-about__wrapper.l-about__wrapper--right
                     .l-skills
-                        +blockTitle('Чем я могу быть Вам полезна', 'skills')
+                        +blockTitle('Чем я могу быть Вам полезна', 'skills')
                         .c-block-text
                             p
                                 | Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не
@@ -46,7 +47,8 @@ block content
                                 +skillsList({
                                     html: 'HTML5',
                                     css: 'CSS3',
-                                    js: 'JavaScript& jQuery'
+                                    js: 'JavaScript& jQuery',
+                                    react: 'React'
                                 })
                             li.l-skills-group__item
                                 h5.l-skills-group__title Backend
@@ -61,7 +63,8 @@ block content
                                 +skillsList({
                                     git: 'Git',
                                     gulp: 'Gulp',
-                                    bower: 'Bower'
+                                    bower: 'Bower',
+                                    webpack: 'Webpack'
                                 })
         section.l-section.l-map
             .c-map#map

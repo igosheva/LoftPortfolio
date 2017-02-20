@@ -2,10 +2,7 @@
 @import '../helpers/fonts';
 
 .c-section-title {
-  position: relative;
   text-align: center;
-  flex-grow:1;
-  align-self: flex-start;
   &__img {
     opacity: .07;
     width:100%;
@@ -18,6 +15,7 @@
     display: inline-block;
     font-weight: $regularFont;
     @include centered(both);
+    letter-spacing: 1px;
     &:before, &:after {
       background-color: $sectionTitle;
       content: '';
@@ -37,6 +35,10 @@
 }
 
 .c-section-title--about {
+  position: absolute;
+  top: -75%;
+  left: 0;
+  right: 0;
   .c-section-title__img {
     width:auto;
   }
@@ -45,9 +47,10 @@
   padding-bottom: 30px;
 }
 .c-section-title--reviews {
-  margin-bottom: 58px;
+  margin-bottom: 50px;
   .c-section-title__text {
-    max-width: 275px;
+    max-width: 290px;
+    letter-spacing: 0;
   }
 }
 .c-section-title--blog {
@@ -59,7 +62,7 @@
     top:80%;
   }
   .c-user__face {
-    margin: 0 auto 20px;
+    margin: 0 auto 25px;
   }
   .c-section-title__text {
     color: $white;

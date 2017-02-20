@@ -1,5 +1,5 @@
 .c-skills-list__item {
-  margin-right: 35px;
+  margin-right: 37px;
   display: inline-block;
 }
 .c-skill {
@@ -29,20 +29,22 @@
 
 .c-skills__circle-above {
   stroke: $green;
-  stroke-dasharray: .0010 360;
   transition: all 1s;
   opacity: .93;
 }
 
-.c-skill__circle:hover
+.c-skill__circle
   .c-skills__circle-above {
     &--html {
       stroke-dasharray: 300 360;
     }
     &--css {
-      stroke-dasharray: 200 360;
+      stroke-dasharray: 250 360;
     }
     &--js {
+      stroke-dasharray: 150 360;
+    }
+    &--react {
       stroke-dasharray: 100 360;
     }
     &--php {
@@ -58,15 +60,15 @@
       stroke-dasharray: 10 360;
     }
     &--git {
-      stroke-dasharray: 200 360;
+      stroke-dasharray: 300 360;
     }
     &--gulp {
-      stroke-dasharray: 200 360;
+      stroke-dasharray: 250 360;
     }
     &--webpack {
       stroke-dasharray: 200 360;
     }
     &--bower {
-      stroke-dasharray: 200 360;
+      stroke-dasharray: 250 360;
     }
 }
