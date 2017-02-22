@@ -77,5 +77,7 @@ $(function () {
 					Routes.init();
 			}
 	};
-	App.init();
+	if ($('#map').length) {
+    App.init();
+  }
 });

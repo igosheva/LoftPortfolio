@@ -5,10 +5,10 @@
 }
 .l-about__col {
   padding-bottom: 49px;
-  &_left {
+  &--left {
     @include columns(left);
   }
-  &_right {
+  &--right {
     @include columns(right);
   }
 }

@@ -3,7 +3,7 @@ mixin ul(className, modificator, items)
         each link, item in items
             li(class=`${className}__item`)
                 a(class=`${className}__link`, href=`${link}`, target='_blank')
-                    svg(class=`${className}__icon ${className}__icon_${item}`)
+                    svg(class=`${className}__icon ${className}__icon--${item}`)
                         use(xlink:href="assets/images/sprite.svg#icons--" + item)
 
 mixin nav(className, items)
@@ -54,4 +54,4 @@ mixin form(className, items, textarea)
         each type, item in textarea
             fieldset(class=`${className}__item`)
                 label(class=`${className}__lebel`)
-                    textarea(class=`${className}__textarea`, name=type, type=type,  placeholder=item)
+                    textarea(class=`${className}__textarea`, name=type, placeholder=item)
