@@ -18,6 +18,7 @@ $(function () {
 		return false;
 	});
 });
+
 $(function () {
 	const $blogNav = $('.js-blog-nav');
 	$(window).scroll(function () {
@@ -25,4 +26,14 @@ $(function () {
 			$blogNav.css('position', 'static')
 		}
 	});
+});
+
+$(function () {
+	$('.c-arrow').on('click', function () {
+		const Height = $('.js-section-two').offset().top;
+		$('body,html').animate({
+			scrollTop: Height
+		}, 1000);
+		return false;
+  });
 });
