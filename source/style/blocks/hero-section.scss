@@ -2,26 +2,25 @@
   height: 100vh;
   position: relative;
   width: 100%;
-  &:after {
-    background-color: rgba(1, 102, 114, .3);
-    content: '';
-    @include centered(max);
-    z-index: -1;
-  }
+  min-height: 650px;
   &__background {
     @include centered(max);
-    background: url('../images/bg-main.jpg') no-repeat center/cover;
     z-index: 0;
+    height: 1270px;
     &:after {
       background-color: rgba(1, 102, 114, .3);
       content: '';
       @include centered(max);
-      z-index: -1;
+    }
+    img {
+      max-width: 180%;
+      display: block;
     }
   }
   &__inner {
     z-index: 2;
     padding: 28px 30px;
+    @include centered(max);
   }
   &__portfolio {
     margin: 0 auto;
@@ -44,6 +43,7 @@
 
 .l-hero--blog {
   height: 395px;
+  min-height: 395px;
   .l-hero__background {
     background-position: center 10%;
   }

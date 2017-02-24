@@ -1,8 +1,17 @@
 .l-reviews {
-  background-image: url('../images/bg-footer.png');
   width: 100%;
-  @include background();
   padding: 45px 20px 213px;
+  position: relative;
+  z-index: 0;
+  &__background {
+    @include centered(max);
+    min-width: 900px;
+    z-index: -1;
+    img {
+      max-width: 180%;
+      display: block;
+    }
+  }
 }
 .l-reviews-list {
   max-width: 780px;

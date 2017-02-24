@@ -56,12 +56,6 @@
 }
 .c-section-title--blog {
   margin-bottom: 14px;
-  .c-section-title__img {
-    fill: $white;
-    @include centered(both);
-    width:303px;
-    top:80%;
-  }
   .c-user__face {
     margin: 0 auto 25px;
   }
@@ -81,4 +75,11 @@
     font-size: $middleFont;
     letter-spacing: -0.5px;
   }
+}
+.c-section-title__img--blog {
+  fill: $white;
+  margin: auto;
+  @include centered(max);
+  width:303px;
+  margin-top: 90px;
 }
