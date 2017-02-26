@@ -26,6 +26,8 @@ $(function () {
     }());
     var wScroll = window.pageYOffset;
 
-    parallax.init(wScroll);
+    if ($('#parallaxScroll').length) {
+      parallax.init(wScroll);
+    }
   }
 });

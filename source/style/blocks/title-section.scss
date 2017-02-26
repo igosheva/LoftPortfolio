@@ -7,6 +7,12 @@
   &__img {
     opacity: .07;
     width:100%;
+    @include tablets() {
+      @include centered(both);
+    }
+    @include phones() {
+      width:60%;
+    }
   }
   &__text {
     @include bernierRegular;
@@ -17,6 +23,15 @@
     font-weight: $regularFont;
     @include centered(both);
     letter-spacing: 1px;
+    @include tablets() {
+      font-size: 49px;
+      position: relative;
+      transform: translate(0, 0);
+      left: 0;
+    }
+    @include phones() {
+      font-size: 2.5rem;
+    }
     &:before, &:after {
       background-color: $sectionTitle;
       content: '';
@@ -46,12 +61,22 @@
 }
 .c-section-title--works {
   padding-bottom: 30px;
+  @include tablets() {
+    padding-top: 43px;
+    padding-bottom: 42px;
+  }
 }
 .c-section-title--reviews {
   margin-bottom: 50px;
+  @include tablets() {
+    margin-bottom: 40px;
+  }
   .c-section-title__text {
     max-width: 290px;
     letter-spacing: 0;
+    @include tablets() {
+      max-width: 100%;
+    }
   }
 }
 .c-section-title--blog {

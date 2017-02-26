@@ -5,30 +5,49 @@
   padding: 15.5px 0;
   opacity: .5;
   transition: all .5s;
+  @include phones() {
+    padding: 0.68rem 0;
+  }
   &:hover {
     opacity: 1;
   }
   &__content {
     background-color: $white;
-  border-radius: 2.5px;
-  display: block;
+    border-radius: 3px;
+    display: block;
     height: 5px;
     position: relative;
     width: 40px;
+    @include phones() {
+      width: 1.786rem;
+      height: 0.214rem;
+      border-radius: 0.143rem;
+    }
     &:before, &:after {
       background-color: $white;
-      border-radius: 2.5px;
+      border-radius: 3px;
       content: '';
       height: 5px;
       left: 0;
       position: absolute;
       width: 40px;
+      @include phones() {
+        width: 1.786rem;
+        height: 0.214rem;
+        border-radius: 0.143rem;
+      }
     }
     &:before {
       top: -15px;
+      @include phones() {
+        top: -0.68rem;
+      }
     }
     &:after {
       top: 15px;
+      @include phones() {
+        top: 0.68rem;
+      }
     }
   }
 }

@@ -4,6 +4,15 @@
   width:100%;
   text-align: center;
   top: 48%;
+  @include tablets() {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transform: translate(0, 0);
+    left: 0;
+  }
   &__tehnologes {
     color: #20b5a1;
     text-align: center;
@@ -13,12 +22,17 @@
     padding: 19px 10px 17px;
     border-bottom: 1px solid rgba(0, 150, 136, .3);
     border-top: 1px solid rgba(0, 150, 136, .3);
-    margin-bottom: 55px;
+    margin-bottom: 40px;
     line-height: .9;
+    @include tablets() {
+      margin-bottom: 20px;
+    }
+    @include phones() {
+      align-self: stretch;
+    }
   }
   &__link {
     background-color: $green;
-    width:100%;
     padding: 13px 18px;
     font-size: $middleFont;
     font-weight: $mediumFont;
@@ -27,6 +41,11 @@
     color: $white;
     position: relative;
     transition: all .5s;
+    display: inline-block;
+    width: auto;
+    @include phones() {
+      padding: 1rem 1.286rem;
+    }
     &:hover, &:focus {
       background-color: $darkGreen;
     }

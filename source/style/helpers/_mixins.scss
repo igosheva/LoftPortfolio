@@ -40,9 +40,34 @@
   }
 }
 
+@mixin desctop() {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin tablets() {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin phones() {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin smallPhones() {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
 @mixin columns($axis: 'left') {
   width: 50%;
   position: relative;
+  @include tablets() {
+    width: 100%;
+  }
 
   @if ($axis == 'left') {
     background: $lightGray;
@@ -61,28 +86,4 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-@mixin desctop() {
-  @media only screen and (max-width: 1200px) {
-    @content;
-  }
-}
-
-@mixin laptop() {
-  @media only screen and (max-width: 992px) {
-    @content;
-  }
-}
-
-@mixin tablets() {
-  @media only screen and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin phones() {
-  @media only screen and (max-width: 480px) {
-    @content;
-  }
 }

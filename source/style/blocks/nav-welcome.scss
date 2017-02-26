@@ -30,5 +30,11 @@
     display: block;
     font-weight: $mediumFont;
     font-size: $middleFont;
+    @include tablets() {
+      padding: 6.5px 26px;
+    }
+    @include phones() {
+      padding: 6.5px 22px;
+    }
   }
 }

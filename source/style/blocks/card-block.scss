@@ -10,5 +10,11 @@
   display: block;
   &__content {
     padding: 38px 66px;
+    @include tablets() {
+      padding: 38px 50px;
+    }
+    @include phones() {
+      padding: 38px 40px;
+    }
   }
 }

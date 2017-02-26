@@ -1,5 +1,9 @@
 //-Basic style for user-block
 .c-user {
+  margin-bottom: 20px;
+  @include tablets() {
+    margin-bottom: 6px;
+  }
   &__face {
     width: 100%;
     min-width: 141px;
@@ -10,29 +14,29 @@
     margin: 0 auto 25px;
   }
   &__name {
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 1.1;
     font-weight: $mediumFont;
+    @include phones() {
+      font-size: 1.5rem;
+    }
   }
   &__prof {
     font-size: 16px;
     line-height: 1.5;
     opacity: .8;
-    margin-bottom: 20px;
   }
 }
 
 //-Style for user-block in section of welcome
 .c-user--welcome {
   color: $darkGray;
+  margin-bottom: 30px;
   .c-user__face {
     margin: 0 auto 15px;
   }
   .c-user__name {
     margin-bottom: 7px;
-  }
-  .c-user__prof {
-    margin-bottom: 30px;
   }
 }
 
@@ -40,7 +44,10 @@
 .c-user--hero {
   color: $white;
   .c-user__name {
-    font-size: 35px;
+    font-size: 2.1875rem;
+    @include phones() {
+      font-size: 1.5rem;
+    }
   }
   .c-user__prof {
     font-weight: $lightFont;

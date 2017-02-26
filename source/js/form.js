@@ -16,9 +16,13 @@ $(function () {
       }
     }
   }());
-  blur.set();
+  if ($('#feedbackForm').length) {
+    blur.set();
+  }
 
   window.onresize = function () {
-    blur.set();
+    if ($('#feedbackForm').length) {
+      blur.set();
+    }
   }
 });

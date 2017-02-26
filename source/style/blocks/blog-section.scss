@@ -4,6 +4,12 @@
   position: relative;
   background-color: $white;
   padding: 66px 110px 210px;
+  @include desctop() {
+    padding: 66px 44px 220px;
+  }
+  @include tablets() {
+    padding: 3.125rem 1.6rem 17.5rem;
+  }
 }
 .l-blog-inner {
   display: flex;
@@ -17,6 +23,13 @@
   margin-right: 7.3%;
   text-align: right;
   padding-top: 5px;
+  @include desctop() {
+    width: 23.8%;
+    margin-right: 9.2%;
+  }
+  @include tablets() {
+    display: none;
+  }
   &__item {
     padding-right: 20px;
     margin-bottom: 20px;
@@ -35,10 +48,20 @@
 }
 .l-blog-content {
   width:56%;
+  @include desctop() {
+    width: 62%;
+  }
+  @include tablets() {
+    width: 100%;
+  }
   &__data {
     padding-bottom: 65px;
     border-bottom: 5px solid rgba(55, 62, 66, .07);
     margin-bottom: 65px;
+    @include tablets() {
+      margin-bottom: 50px;
+      padding-bottom: 50px;
+    }
     &:last-child{
       padding-bottom: 0;
       border-bottom: none;
@@ -52,14 +75,26 @@
     line-height: 1;
     @include bernierRegular;
     margin-bottom: 18px;
+    @include tablets() {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
   }
   &__date {
     font-size: $middleFont;
     color: $green;
     margin-bottom: 20px;
+    @include tablets() {
+      font-size: 0.875rem;
+      margin-bottom: 10px;
+    }
   }
   &__text {
     line-height: 1.64;
+    @include tablets() {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
     p {
       margin-bottom: 10px;
       display: block;

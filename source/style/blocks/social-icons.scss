@@ -5,6 +5,9 @@
     display: inline-block;
     margin-left: 27px;
     vertical-align: middle;
+    @include phones() {
+      margin-left: 2.143rem;
+    }
     &:first-child {
       margin-left: 0;
     }
@@ -43,6 +46,18 @@
 .c-social--hero {
   .c-social__icon {
     fill: $white;
+    @include phones() {
+      max-width: 1.786rem;
+      max-height: 1rem;
+      &--github {
+        max-width: 1.5rem;
+        max-height: 1.286rem;
+      }
+      &--in {
+        max-width: 1.357rem;
+        max-height: 1.286rem;
+      }
+    }
   }
 }
 
@@ -55,5 +70,9 @@
     fill: $white;
     max-width: 36px;
     max-height: 36px;
+    @include phones() {
+      max-width: 2.572rem;
+      max-height: 2.572rem;
+    }
   }
 }

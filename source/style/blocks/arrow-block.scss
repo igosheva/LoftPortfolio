@@ -14,9 +14,18 @@
     position: absolute;
     @include centered(x);
     bottom: 70px;
+    @include tablets() {
+      bottom: 50px;
+    }
   }
   &--feedback {
     margin: 0 auto;
     transform: rotate(180deg);
+  }
+  &--blog {
+    display: none;
+    @include tablets() {
+      display: block;
+    }
   }
 }

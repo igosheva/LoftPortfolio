@@ -9,14 +9,10 @@ html {
   height: 100%;
   width: 100%;
   font-size: 16px;
-  @include laptop() {
-    font-size: 15px;
-  }
   @include tablets() {
-    font-size: 14px;
   }
   @include phones() {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 body {

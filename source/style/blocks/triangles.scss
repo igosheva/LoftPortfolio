@@ -3,6 +3,12 @@
   height: 150px;
   position: absolute;
   bottom: 100%;
+  @include desctop() {
+    height: 100px;
+  }
+  @include tablets() {
+    height: 65px;
+  }
   &__left {
     left: 0;
   }

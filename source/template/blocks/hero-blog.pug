@@ -1,5 +1,5 @@
 mixin hero-blog()
-    section.l-section.l-hero.l-hero--blog
+    section.l-section.l-hero.l-hero--blog#parallaxScroll
         .l-hero__background.js-hero-bg
             img(src='assets/images/bg-main.jpg')
         .l-section__wrapper.l-hero__inner
@@ -13,3 +13,4 @@ mixin hero-blog()
                     .c-user__face
                     h2.c-section-title__text Блог
                     p.c-section-title__extra Статьи, которые я написала
+            +arrow('hero')

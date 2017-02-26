@@ -7,10 +7,16 @@
 
 .l-works__content {
   display: flex;
+  @include tablets() {
+    flex-direction: column;
+  }
 }
 .l-works__col {
   &_left {
     @include columns(left);
+    @include tablets() {
+      display: flex;
+    }
   }
   &_right {
     @include columns(right);
@@ -24,6 +30,13 @@
     padding: 20px;
     position: relative;
     height: 100%;
+    @include tablets() {
+      width: 100%;
+      padding: 42px 20px 60px;
+    }
+    @include phones() {
+      padding: 2.143rem 0;
+    }
   }
   &--right {
     margin-right: auto;

@@ -1,11 +1,29 @@
 .c-slider {
   &__image-wrapper {
     padding: 64px 120px 60px;
+    @include desctop() {
+      padding: 113px 56px 100px;
+    }
+    @include tablets() {
+      padding: 100px 81px 37px;
+    }
+    @include phones() {
+      padding: 49px 33px;
+    }
   }
   &__image {
     height: 400px;
     width: 100%;
     @include background();
+    @include desctop() {
+      height: 310px;
+    }
+    @include phones() {
+      height: 15.43rem;
+    }
+    @include smallPhones() {
+      height: 11.43rem;
+    }
   }
 }
 .c-slider-list {
@@ -14,6 +32,15 @@
     width: 50%;
     padding: 0 50px;
     position: relative;
+    @include desctop() {
+      padding: 0 10px;
+    }
+    @include tablets() {
+      padding: 0 50px;
+    }
+    @include phones() {
+      padding: 0;
+    }
     &:after {
       content: '';
       background-color: rgba(182, 180, 174, .7);
@@ -25,8 +52,14 @@
   }
   &__image {
     width:100%;
-    height: 226px;
+    height: 225px;
     @include background();
+    @include phones() {
+      height: 10.643rem;
+    }
+    @include smallPhones() {
+      height: 6.643rem;
+    }
   }
 }
 .c-slider-arrow {
