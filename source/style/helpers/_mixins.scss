@@ -64,7 +64,6 @@
 
 @mixin columns($axis: 'left') {
   width: 50%;
-  position: relative;
   @include tablets() {
     width: 100%;
   }

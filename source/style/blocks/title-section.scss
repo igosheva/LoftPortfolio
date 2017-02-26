@@ -55,8 +55,15 @@
   top: -75%;
   left: 0;
   right: 0;
+  @include tablets() {
+    position: static;
+    top:0;
+  }
   .c-section-title__img {
     width:auto;
+    @include phones() {
+      width:50%;
+    }
   }
 }
 .c-section-title--works {

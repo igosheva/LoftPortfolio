@@ -1,12 +1,50 @@
+.l-skills {
+  @include desctop() {
+    margin-top: 5px;
+  }
+
+}
 .l-skills-group {
   margin-top: 47px;
+  @include tablets() {
+    margin-top: 42px;
+    margin-bottom: -40px;
+  }
+  @include phones() {
+    margin-top: 1.5rem;
+  }
   &__item {
     margin-bottom: 30px;
+    @include tablets() {
+      margin-bottom: 40px;
+    }
+    @include phones() {
+      margin-bottom: 0
+    }
   }
   &__title {
     font-size: 28px;
     color: $darkGray;
     font-weight: $mediumFont;
     margin-bottom: 15px;
+    @include desctop() {
+      margin-bottom: .8rem;
+    }
+    @include tablets() {
+      text-align: center;
+      font-size: 21px;
+    }
+    @include phones() {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+.l-skills-list {
+  margin-right: -37px;
+  @include tablets() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

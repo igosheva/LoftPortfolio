@@ -2,11 +2,18 @@
 
 .l-about {
   display: flex;
+  position: relative;
+  @include tablets() {
+    flex-direction: column;
+  }
 }
 .l-about__col {
   padding-bottom: 49px;
   &--left {
     @include columns(left);
+    @include tablets() {
+      padding-bottom: 20px;
+    }
   }
   &--right {
     @include columns(right);
@@ -20,10 +27,28 @@
     display: flex;
     justify-content: space-between;
     padding: 0 20px 20px;
+    @include desctop() {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include tablets() {
+      padding-top: 42px;
+    }
+    @include phones() {
+      padding: 0;
+      padding-top: 2.143rem;
+    }
   }
   &--right {
     margin-right: auto;
     padding: 10px 40px 20px;
+    @include tablets() {
+      padding-top: 45px;
+      padding-bottom: 0;
+    }
+    @include phones() {
+      padding: 2rem .7rem 0;
+    }
   }
 }
 .l-about__title {
@@ -32,16 +57,45 @@
   flex-grow:1;
   align-self: flex-start;
   min-height: 50px;
+  @include desctop() {
+    width: 100%;
+  }
+  @include tablets() {
+    min-height: 0;
+  }
 }
 
 .c-about {
   max-width: 443px;
   width: 51.55%;
   margin-top: 20px;
+  @include desctop() {
+    width: 100%;
+    margin-top: 75px;
+  }
+  @include tablets() {
+    margin-top: 42px;
+    max-width: 470px;
+  }
+  @include phones() {
+    margin-top: 1.428rem;
+  }
   &__pic {
     height: 390px;
     width: 100%;
     @include background();
     margin-bottom: 40px;
+    background-position: center 0;
+    @include desctop() {
+      margin-bottom: 2rem;
+    }
+    @include tablets() {
+      height: 420px;
+      margin-bottom: 2.7rem;
+    }
+    @include phones() {
+      height: 20.357rem;
+      margin-bottom: 1.9rem;
+    }
   }
 }

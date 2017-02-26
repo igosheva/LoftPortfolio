@@ -1,6 +1,18 @@
 .c-skills-list__item {
   margin-right: 37px;
   display: inline-block;
+  @include phones() {
+    margin-bottom: 2rem;
+  }
+  &:nth-child(4n) {
+    margin-right: 0;
+    @include tablets() {
+      margin-right: 37px;
+    }
+  }
+  @include desctop() {
+    margin-right: 2rem;
+  }
 }
 .c-skill {
   position: relative;
@@ -19,18 +31,36 @@
     display: block;
     fill: none;
     stroke-width: 20;
+    @include desctop() {
+      width: 110px;
+      height: 110px;
+      stroke-width: 18;
+    }
+    @include phones() {
+      width: 7.857rem;
+      height: 7.857rem;
+      stroke-width: 18;
+    }
   }
 }
 
 .c-skills__circle-under {
   stroke: #dfdcd5;
   fill: none;
+  @include desctop() {
+    r:45;
+  }
 }
 
 .c-skills__circle-above {
   stroke: $green;
   transition: all 1s;
   opacity: .93;
+  @include desctop() {
+    r:45;
+    cy: 50%;
+    cx: 60%;
+  }
 }
 
 .c-skill__circle

@@ -2,6 +2,15 @@
   color: $darkGray;
   font-size: $middleFont;
   line-height: 1.6;
+  @include tablets() {
+    font-size: $smallFont;
+    line-height: 1.72;
+  }
+  @include phones() {
+    margin: 0 .7rem;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
   &__link {
     padding: 0 5px;
     color: $blue;
@@ -14,6 +23,17 @@
     padding-bottom: 10px;
     &:last-child {
       padding-bottom: 0;
+    }
+  }
+}
+.l-skills {
+  .c-block-text {
+    @include tablets() {
+      width: 71%;
+      margin: 0 auto;
+    }
+    @include phones() {
+      width: 100%;
     }
   }
 }

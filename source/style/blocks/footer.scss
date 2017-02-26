@@ -39,7 +39,6 @@
     line-height: 1.5;
     opacity: .5;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     @include tablets() {
       flex-direction: column;
@@ -62,6 +61,12 @@
       }
       @include phones() {
         margin-bottom: 1.1rem;
+      }
+      &:last-child {
+        text-align: right;
+        @include tablets() {
+          text-align: center;
+        }
       }
     }
   }

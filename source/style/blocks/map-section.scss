@@ -5,6 +5,17 @@
   height:1050px;
   display: flex;
   padding-bottom: 144px;
+  @include desctop() {
+    height:973px;
+  }
+  @include tablets() {
+    padding-bottom: 228px;
+    height: 875px;
+  }
+  @include phones() {
+    padding-bottom: 19rem;
+    height: 67.6rem;
+  }
 }
 .c-map {
   width: 100%;
@@ -14,12 +25,29 @@
   @include centered(both);
   top:43%;
   padding: 30px 40px 40px;
+  @include tablets() {
+    top:37%;
+    padding-bottom: 30px;
+  }
+  @include phones() {
+    top:0;
+    transform: none;
+    left:0;
+    right:0;
+    padding: 2rem 0.7rem;
+  }
 }
 
 .c-contacts {
   &__item {
     margin-bottom: 18px;
     line-height: 24px;
+    @include tablets() {
+      margin-bottom: 20px;
+    }
+    @include phones() {
+      margin-bottom: 1.7rem;
+    }
     &:last-child {
       margin-bottom: 0;
       .c-contacts__link {

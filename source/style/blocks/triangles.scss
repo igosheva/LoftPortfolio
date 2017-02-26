@@ -21,11 +21,17 @@
 }
 .c-triangle--about {
   width: 100%;
+  @include tablets() {
+    width: 50%;
+  }
   &.c-triangle__left {
     fill: $lightGray;
   }
   &.c-triangle__right {
     fill: $beige;
+    @include tablets() {
+      fill: $lightGray;
+    }
   }
 }
 .c-triangle--works {

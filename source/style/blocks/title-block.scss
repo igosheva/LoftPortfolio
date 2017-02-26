@@ -52,6 +52,15 @@
 .l-skills {
   .c-block-title__wrapper {
     margin-bottom: 30px;
+    @include desctop() {
+      margin-bottom: 1.7rem;
+    }
+    @include tablets() {
+      margin-bottom: .5rem;
+    }
+    @include phones() {
+      margin-bottom: 1rem;
+    }
   }
   .c-block-title__text {
     max-width: 220px;
@@ -61,11 +70,35 @@
 .c-about {
   .c-block-title__wrapper {
     margin-bottom: 20px;
+    @include desctop() {
+      margin-bottom: 1.7rem;
+    }
+    @include tablets() {
+      margin-bottom: .5rem;
+    }
+    @include phones() {
+      margin-bottom: .7rem;
+    }
   }
 }
 .c-block-title--contacts {
   .c-block-title__wrapper {
     margin-bottom: 30px;
+    @include tablets() {
+      margin-bottom: 35px;
+    }
+  }
+  .c-block-title__text {
+    @include phones() {
+      font-size: 2.5rem;
+    }
+  }
+}
+.l-contacts {
+  .c-block-title__wrapper {
+    @include phones() {
+      margin-bottom: .6rem;
+    }
   }
 }
 .c-feedback {
