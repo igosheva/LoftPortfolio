@@ -17,6 +17,8 @@ block content
             .l-works__content
                 .l-works__col_left
                     .l-works__wrapper.l-works__wrapper--left
+                        .c-slider__image-wrapper
+                            .c-slider__image(style='background-image: url(assets/images/resume.jpg)')
                         .c-work
                             +blockTitle('Личный сайт Игошевой Анастасии')
                             p.c-work__tehnologes HTML5, CSS3, PUG, STYLUS, JAVASCRIPT
@@ -26,17 +28,17 @@ block content
                                         use(xlink:href="assets/images/sprite.svg#icons--link")
                 .l-works__col_right
                     .c-slider.l-works__wrapper.l-works__wrapper--right
-                        .c-slider__image-wrapper
-                            .c-slider__image(style='background-image: url(assets/images/resume.jpg)')
                         ul.c-slider-list
                             li.c-slider-list__item
                                 .c-slider-list__image(style='background-image: url(assets/images/jason-wood.png)')
                                 a.c-slider-arrow
-                                    i.c-slider-arrow__img.c-slider-arrow__img--bottom
+                                    svg.c-slider-arrow__img
+                                        use(xlink:href="assets/images/sprite.svg#icons--arrow_down")
                             li.c-slider-list__item
                                 .c-slider-list__image(style='background-image: url(assets/images/fiato.jpg)')
-                                a.c-slider-arrow
-                                    i.c-slider-arrow__img.c-slider-arrow__img--top
+                                a.c-slider-arrow.c-slider-arrow--top
+                                    svg.c-slider-arrow__img
+                                        use(xlink:href="assets/images/sprite.svg#icons--arrow_down")
         section.l-section.l-reviews
             .l-reviews__background.js-reviews-bg
                 img(src='assets/images/bg-footer.png')

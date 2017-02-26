@@ -7,6 +7,10 @@
   cursor: pointer;
   z-index: 111;
   transition: all .5s;
+  @include phones() {
+    max-width: 1.857rem;
+    max-height: 1.143rem;
+  }
   &:hover, &:focus {
     opacity: 1;
   }
@@ -16,6 +20,9 @@
     bottom: 70px;
     @include tablets() {
       bottom: 50px;
+    }
+    @include phones() {
+      bottom: 3.57rem;
     }
   }
   &--feedback {

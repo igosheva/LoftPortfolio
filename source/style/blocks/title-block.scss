@@ -13,8 +13,8 @@
       margin-bottom: 15px;
     }
     @include phones() {
-      margin-bottom: 1.33rem;
       width: 80%;
+      margin: 0 auto 1.33rem;
     }
   }
   &__text {
@@ -66,5 +66,13 @@
 .c-block-title--contacts {
   .c-block-title__wrapper {
     margin-bottom: 30px;
+  }
+}
+.c-feedback {
+  .c-block-title__wrapper {
+    @include phones() {
+      width: 100%;
+      margin-bottom: 1.7rem;
+    }
   }
 }

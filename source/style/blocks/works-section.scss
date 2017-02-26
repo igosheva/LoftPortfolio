@@ -7,8 +7,10 @@
 
 .l-works__content {
   display: flex;
+  height: 100vh;
   @include tablets() {
     flex-direction: column;
+    height: auto;
   }
 }
 .l-works__col {
@@ -32,13 +34,24 @@
     height: 100%;
     @include tablets() {
       width: 100%;
-      padding: 42px 20px 60px;
+      padding: 0;
+      height: auto;
     }
     @include phones() {
-      padding: 2.143rem 0;
+      padding-bottom: 2.143rem;
     }
   }
   &--right {
     margin-right: auto;
+    height: 100%;
+    @include tablets() {
+      height: 215px;
+    }
+    @include phones() {
+      height: 10.643rem;
+    }
+    @include smallPhones() {
+      height: 6.65rem;
+    }
   }
 }

@@ -12,6 +12,12 @@
     background: url('../images/face.jpg') no-repeat center/cover, #e2e2e2;
     border-radius: 50%;
     margin: 0 auto 25px;
+    @include phones() {
+      min-width: 10.07rem;
+      max-width: 10.07rem;
+      height: 10.07rem;
+      margin-bottom: 1.786rem;
+    }
   }
   &__name {
     font-size: 1.75rem;
@@ -47,6 +53,7 @@
     font-size: 2.1875rem;
     @include phones() {
       font-size: 1.5rem;
+      line-height: 1.8;
     }
   }
   .c-user__prof {

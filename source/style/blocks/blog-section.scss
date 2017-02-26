@@ -10,6 +10,9 @@
   @include tablets() {
     padding: 3.125rem 1.6rem 17.5rem;
   }
+  @include phones() {
+    padding: 2.5rem 0.714rem 22.5rem;
+  }
 }
 .l-blog-inner {
   display: flex;
@@ -62,6 +65,10 @@
       margin-bottom: 50px;
       padding-bottom: 50px;
     }
+    @include phones() {
+      margin-bottom: 1.857rem;
+      padding-bottom: 1.857rem;
+    }
     &:last-child{
       padding-bottom: 0;
       border-bottom: none;
@@ -79,6 +86,11 @@
       font-size: 30px;
       margin-bottom: 10px;
     }
+    @include phones() {
+      font-size: 1.5rem;
+      margin-bottom: 0.714rem;
+      line-height: 1.4;
+    }
   }
   &__date {
     font-size: $middleFont;
@@ -88,6 +100,10 @@
       font-size: 0.875rem;
       margin-bottom: 10px;
     }
+    @include phones() {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
   }
   &__text {
     line-height: 1.64;
@@ -95,9 +111,15 @@
       font-size: 0.875rem;
       line-height: 1.5;
     }
+    @include phones() {
+      font-size: 1rem;
+    }
     p {
       margin-bottom: 10px;
       display: block;
+      @include phones() {
+        margin-bottom: 1rem;
+      }
       &:last-child {
         margin-bottom: 0;
       }

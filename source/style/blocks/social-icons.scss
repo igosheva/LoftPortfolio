@@ -5,8 +5,11 @@
     display: inline-block;
     margin-left: 27px;
     vertical-align: middle;
+    @include tablets() {
+      margin-left: 24px;
+    }
     @include phones() {
-      margin-left: 2.143rem;
+      margin-left: 1.857rem;
     }
     &:first-child {
       margin-left: 0;

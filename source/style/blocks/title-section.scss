@@ -65,17 +65,33 @@
     padding-top: 43px;
     padding-bottom: 42px;
   }
+  @include phones() {
+    padding-top: 2rem;
+    padding-bottom: 2.3rem;
+  }
 }
 .c-section-title--reviews {
   margin-bottom: 50px;
   @include tablets() {
     margin-bottom: 40px;
   }
+  @include phones() {
+    margin-bottom: 1.7rem;
+  }
+  .c-section-title__img {
+    @include phones() {
+      width:80%;
+    }
+  }
   .c-section-title__text {
     max-width: 290px;
     letter-spacing: 0;
     @include tablets() {
       max-width: 100%;
+    }
+    @include phones() {
+      max-width: 11.5rem;
+      line-height: 1.1;
     }
   }
 }
@@ -107,4 +123,11 @@
   @include centered(max);
   width:303px;
   margin-top: 90px;
+  @include tablets() {
+    transform: none;
+  }
+  @include phones() {
+    margin-top: 6.428rem;
+    width: 10.714rem;
+  }
 }

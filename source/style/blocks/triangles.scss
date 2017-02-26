@@ -9,6 +9,9 @@
   @include tablets() {
     height: 65px;
   }
+  @include phones() {
+    height: 1.857rem;
+  }
   &__left {
     left: 0;
   }

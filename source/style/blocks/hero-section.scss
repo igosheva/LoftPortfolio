@@ -10,12 +10,18 @@
   @include tablets() {
     min-height: 506px;
   }
+  @include phones() {
+    min-height: 39.643rem;
+  }
   &__background {
     @include centered(max);
     z-index: 0;
     height: 1270px;
     @include tablets() {
       height: 650px;
+    }
+    @include phones() {
+      height: 50.43rem;
     }
     &:after {
       background-color: rgba(1, 102, 114, .3);
@@ -39,6 +45,9 @@
     @include tablets() {
       padding: 28px 24px;
     }
+    @include phones() {
+      padding: 0.714rem;
+    }
   }
   &__portfolio {
     margin: 0 auto;
@@ -59,6 +68,9 @@
     left:0;
     @include centered(y);
     top:46%;
+    @include phones() {
+      top: 41%;
+    }
   }
 }
 
@@ -68,12 +80,21 @@
   @include tablets() {
     min-height: 506px;
   }
+  @include phones() {
+    min-height: 39.643rem;
+  }
   .l-hero__background {
     background-position: center 10%;
   }
   .l-hero__inner {
     max-width: 1200px;
     padding: 30px;
+    @include tablets() {
+      padding: 28px 24px;
+    }
+    @include phones() {
+      padding: 0.714rem;
+    }
   }
   .l-hero__content {
     position: relative;
@@ -81,6 +102,9 @@
     margin-top: 25px;
     @include tablets() {
       margin-top: 90px;
+    }
+    @include phones() {
+      margin-top: 6.428rem;
     }
   }
 }

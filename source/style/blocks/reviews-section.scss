@@ -4,10 +4,10 @@
   position: relative;
   z-index: 0;
   @include tablets() {
-    padding: 45px 24px 278px;
+    padding: 2.5rem 1.5rem 17.375rem;
   }
   @include phones() {
-    padding: 2.714rem 0.7143rem 23rem;
+    padding: 2.5rem 0.7143rem 22.5rem;
   }
   &__background {
     @include centered(max);
@@ -31,7 +31,7 @@
   flex-wrap: wrap;
   margin-bottom: 70px;
   @include tablets() {
-    margin-bottom: 48px;
+    margin-bottom: 3.5rem;
   }
   @include phones() {
     flex-direction: column;
@@ -44,7 +44,7 @@
   @include phones() {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 2.143rem;
+    margin-bottom: 2rem;
     &:last-child {
       margin-bottom: 0;
     }
@@ -84,6 +84,8 @@
     }
     @include phones() {
       font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 0.5rem;
     }
   }
 }
