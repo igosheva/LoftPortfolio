@@ -26,6 +26,7 @@
 
 .l-works__wrapper {
   @include columns-wrapper();
+  position: relative;
   &--left {
     margin-left: auto;
     padding: 20px;

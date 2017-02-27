@@ -119,20 +119,10 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'fontAwesome';
-  src: local('☺'),
-    url('../fonts/FontAwesome/fontawesome-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 @mixin roboto() {
   font-family: 'roboto', sans-serif;
 }
 @mixin bernierRegular() {
   font-family: 'bernierRegular', sans-serif;
-}
-@mixin fontAwesome() {
-  font-family: 'fontAwesome', sans-serif;
 }
