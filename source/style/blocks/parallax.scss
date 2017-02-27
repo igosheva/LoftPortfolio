@@ -1,0 +1,11 @@
+//Style for parallax of welcome section
+.l-parallax {
+  @include centered(max);
+  &__layer{
+    @include centered(stretchX);
+    bottom:0;
+    img {
+      vertical-align: bottom;
+    }
+  }
+}

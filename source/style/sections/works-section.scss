@@ -1,0 +1,56 @@
+//Style for section of works
+.l-works {
+  position: relative;
+  background-color: $middleGray;
+}
+
+.l-works__content {
+  display: flex;
+  height: 100vh;
+  @include tablets() {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.l-works__col {
+  &_left {
+    @include columns(left);
+    @include tablets() {
+      display: flex;
+    }
+  }
+  &_right {
+    @include columns(right);
+  }
+}
+
+.l-works__wrapper {
+  @include columns-wrapper();
+  &--left {
+    margin-left: auto;
+    padding: 20px;
+    position: relative;
+    height: 100%;
+    @include tablets() {
+      width: 100%;
+      padding: 0;
+      height: auto;
+    }
+    @include phones() {
+      padding-bottom: 2.143rem;
+    }
+  }
+  &--right {
+    margin-right: auto;
+    height: 100%;
+    @include tablets() {
+      height: 215px;
+    }
+    @include phones() {
+      height: 10.643rem;
+    }
+    @include smallPhones() {
+      height: 6.65rem;
+    }
+  }
+}

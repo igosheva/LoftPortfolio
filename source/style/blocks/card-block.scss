@@ -1,3 +1,4 @@
+//Style for card of welcome section
 .l-card {
   background-color: rgba(252, 252, 252, .85);
   text-align: center;
@@ -8,6 +9,7 @@
   overflow: hidden;
   margin: auto;
   display: block;
+  z-index:10;
   &__content {
     padding: 38px 66px;
     @include tablets() {

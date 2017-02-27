@@ -16,5 +16,6 @@ $lightFont: 300;
 $middleFont: 16px;
 $smallFont: 14px;
 
-@import 'blocks/*';
 @import 'helpers/*';
+@import 'sections/*';
+@import 'blocks/*';
