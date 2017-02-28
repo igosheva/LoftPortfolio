@@ -41,6 +41,8 @@
     margin: 0;
     margin-bottom: 22px;
     padding: 0;
+    border-radius: 4px;
+    overflow: hidden;
     @include phones() {
       margin-bottom: 1.5rem;
     }
@@ -53,8 +55,6 @@
     border: none;
     background-color: $white;
     color: $sectionTitle;
-    border-radius: 4px;
-    overflow: hidden;
     padding: 12px 20px;
     line-height: 1;
     @include roboto;

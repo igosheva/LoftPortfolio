@@ -1,21 +1,96 @@
 //Style for card of welcome section
 .l-card {
   background-color: rgba(252, 252, 252, .85);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 5px;
+  transition: 0.6s;
+  transform-style: preserve-3d;
   border-top-left-radius: 4px;
   border-top-right-radius: 5px;
-  display: block;
-  margin: auto;
-  overflow: hidden;
-  text-align: center;
+  position: relative;
+  width: 394px;
+  height: 424px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 5px;
+  &__wrapper {
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    &.active .l-card{
+      transform: rotateY(180deg);
+    }
+  }
+  &__welcome, &__authorization {
+    backface-visibility: hidden;
+    bottom: 0;
+    top:0;
+    @include centered(stretchX);
+  }
+  &__welcome {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  &__authorization {
+    transform: rotateY(180deg);
+  }
   &__content {
-    padding: 38px 66px;
+    padding: 38px 20px;
     @include tablets() {
       padding: 38px 50px;
     }
     @include phones() {
       padding: 38px 40px;
+    }
+  }
+}
+.c-authorization-form {
+  &__item {
+    border: none;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 45px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    &:before {
+      content: '';
+      width:45px;
+      height: 45px;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left:0;
+      background-color: #f0efe9;
+    }
+    @include phones() {
+      margin-bottom: 1.5rem;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__input {
+    width: 100%;
+    border: none;
+    background-color: $white;
+    color: $sectionTitle;
+    padding: 13px 20px;
+    line-height: 1;
+    @include roboto;
+    outline: none;
+    font-size: $middleFont;
+    @include phones() {
+      padding: 1rem 1.25rem;
+    }
+    &::-webkit-input-placeholder {
+      color: rgba(55, 62, 66, .5);
+      @include roboto;
+    }
+    &:focus {
+      outline: none;
+      &::-webkit-input-placeholder {
+        opacity: 0;
+      }
     }
   }
 }

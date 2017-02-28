@@ -29,19 +29,29 @@ block content
             .l-parallax__layer
                 img.l-parallax__layer-img(src='assets/images/parallax-10.png')
         .l-welcome__inner.l-section__wrapper
-            button.l-welcome__authorization Авторизоваться
-            .l-card
-                .l-card__content
-                    +user('welcome')
-                    +ul('c-social', 'welcome', {
-                        vk: 'https://vk.com/igosh',
-                        github: 'https://github.com/igosheva',
-                        in: 'https://github.com/igosheva'
-                    })
-                +nav('nav-welcome', {
-                    'Мои работы': './portfolio.html',
-                    'Обо мне': './about.html',
-                    'Блог': './blog.html'
-                })
+            button.l-welcome__authorization.js-authorization Авторизоваться
+            .l-card__wrapper
+                .l-card
+                    .l-card__welcome.active
+                        .l-card__content
+                            +user('welcome')
+                            +ul('c-social', 'welcome', {
+                                vk: 'https://vk.com/igosh',
+                                github: 'https://github.com/igosheva',
+                                in: 'https://github.com/igosheva'
+                            })
+                        +nav('nav-welcome', {
+                            'Мои работы': './portfolio.html',
+                            'Обо мне': './about.html',
+                            'Блог': './blog.html'
+                        })
+                    .l-card__authorization
+                        .l-card__content
+                            +blockTitle('Авторизуйтесь', 'authorization')
+                            +form('c-authorization-form', {'Логин':'text', 'Пароль': 'password'}, {})
+                        +nav('nav-welcome', {
+                            'На главную': './index.html',
+                            'Войти': ''
+                        })
             footer.l-welcome__footer
                 p © Игошева Анастасия | создано с любовью в LoftSchool | 2017

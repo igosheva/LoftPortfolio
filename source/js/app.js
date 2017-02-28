@@ -56,3 +56,20 @@ $(function () {
     navContainer.toggleClass('active')
   });
 });
+
+$(function () {
+  var
+    authorization = $('.js-authorization'),
+    card = $('.l-card__wrapper');
+
+	authorization.on('click', function (e) {
+    e.preventDefault();
+
+    var _this = $(this);
+
+		_this.toggleClass('active');
+    setTimeout(function () {
+      card.toggleClass('active');
+    }, 500);
+  });
+});

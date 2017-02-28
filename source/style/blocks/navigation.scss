@@ -36,10 +36,20 @@
 .c-navigation {
   height: 100vh;
   position: relative;
-  opacity: 0;
-  transition: all .5s ease-in-out;
   &.active {
-    opacity: 1;
+    .c-navigation__item {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s;
+      &:nth-of-type(2) {
+        animation-delay: .45s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .55s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .65s;
+      }
+    }
   }
   &__list {
     display: flex;
@@ -55,6 +65,7 @@
     font-weight: $regularFont;
     letter-spacing: 1px;
     margin-bottom: 70px;
+    opacity:0;
     @include tablets() {
       font-size: 49px;
       position: relative;
@@ -84,5 +95,15 @@
     &:after {
       right: -40px;
     }
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
   }
 }

@@ -1,5 +1,10 @@
 //Style for navigation of welcome section
 .nav-welcome {
+  @include centered(stretchX);
+  bottom: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
   &__list {
     display: flex;
   }
