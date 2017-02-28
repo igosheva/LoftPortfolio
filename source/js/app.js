@@ -37,3 +37,22 @@ $(function () {
 		return false;
   });
 });
+
+$(function () {
+  var
+    hamburger = $('.js-hamburger'),
+    navContainer = $('.js-navigation'),
+    navContent = $('.c-navigation');
+
+	hamburger.on('click', function (e) {
+    e.preventDefault();
+
+    var _this = $(this);
+
+		_this.toggleClass('active');
+    setTimeout(function () {
+      navContent.toggleClass('active');
+    }, 500);
+    navContainer.toggleClass('active')
+  });
+});

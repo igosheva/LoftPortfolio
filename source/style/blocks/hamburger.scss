@@ -1,52 +1,70 @@
 //Style for hamburger
 .c-hamburger {
   cursor: pointer;
-  float: right;
-  padding: 15.5px 0;
+  position: absolute;
+  top:28px;
+  right:30px;
+  width: 40px;
+  height: 35px;
   opacity: .5;
-  transition: all .5s;
+  z-index:111;
+  @include tablets() {
+    right:24px;
+  }
   @include phones() {
-    padding: 0.68rem 0;
+    top: 0.714rem;
+    right: 0.714rem;
+    height: 1.5rem;
+    width: 1.786rem;
   }
   &:hover {
     opacity: 1;
   }
-  &__content {
+  &__stick {
+    position: absolute;
     background-color: $white;
     border-radius: 3px;
     display: block;
     height: 5px;
-    position: relative;
     width: 40px;
+    transition: all .5s;
     @include phones() {
       width: 1.786rem;
       height: 0.214rem;
       border-radius: 0.143rem;
     }
-    &:before, &:after {
-      background-color: $white;
-      border-radius: 3px;
-      content: '';
-      height: 5px;
-      left: 0;
-      position: absolute;
-      width: 40px;
+    &--top {
+      top:0;
+    }
+    &--middle {
+      top:15px;
       @include phones() {
-        width: 1.786rem;
-        height: 0.214rem;
-        border-radius: 0.143rem;
+        top:0.65rem;
       }
     }
-    &:before {
-      top: -15px;
-      @include phones() {
-        top: -0.68rem;
-      }
+    &--bottom {
+      bottom:0;
     }
-    &:after {
-      top: 15px;
-      @include phones() {
-        top: 0.68rem;
+  }
+  &.active {
+    opacity: 1;
+    .c-hamburger__stick {
+      &--middle {
+        opacity: 0;
+      }
+      &--top {
+        transform: translateY(15px) translateX(0) rotate(45deg);
+        opacity: 1;
+        @include phones() {
+          transform: translateY(0.65rem) translateX(0) rotate(45deg);
+        }
+      }
+      &--bottom {
+        transform: translateY(-15px) translateX(0) rotate(-45deg);
+        opacity: 1;
+        @include phones() {
+          transform: translateY(-0.65rem) translateX(0) rotate(-45deg);
+        }
       }
     }
   }

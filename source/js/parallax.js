@@ -31,3 +31,35 @@ $(function () {
     }
   }
 });
+
+$(function () {
+  if ($('#parallaxMouse').length) {
+    var
+      parallaxContainer = document.getElementById('parallaxMouse'),
+      layers = parallaxContainer.children;
+
+    window.addEventListener('mousemove', function (e) {
+      var
+        pageX = e.pageX,
+        pageY = e.pageY,
+        initialX = (window.innerWidth/2) - pageX,
+        initialY = (window.innerHeight/2) - pageY;
+
+      [].slice.call(layers).forEach(function (layer, i) {
+        var
+          divider = i / 100,
+          positionX = initialX * divider,
+          positionY = initialY * divider,
+          bottomPosition = (window.innerHeight/2) * divider,
+          layerStyle = layer.style,
+          transformString = 'translate3d('+ positionX +'px, '+ positionY +'px, 0)';
+
+        layerStyle.transform = transformString;
+        layerStyle.webkitTransform = transformString;
+        layerStyle.oTransform= transformString;
+        layerStyle.msTransform = transformString;
+        layerStyle.bottom = '-' + bottomPosition +'px';
+      })
+    });
+  }
+});

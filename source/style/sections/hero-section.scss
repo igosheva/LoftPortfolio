@@ -14,6 +14,9 @@
   @include phones() {
     min-height: 39.643rem;
   }
+  &.active {
+    position: static;
+  }
   &__background {
     @include centered(max);
     z-index: 0;

@@ -6,7 +6,7 @@
   max-width: 26px;
   max-height: 16px;
   cursor: pointer;
-  z-index: 111;
+  z-index: 10;
   transition: all .5s;
   @include phones() {
     max-width: 1.857rem;

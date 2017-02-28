@@ -1,9 +1,9 @@
 //Style for welcome section
 .l-welcome {
-  //background-image: url('../images/bg-main.jpg');
-  //@include background();
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  position: relative;
   &__inner {
     display: flex;
     flex-direction: column;
