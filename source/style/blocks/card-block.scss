@@ -10,6 +10,10 @@
   height: 424px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 5px;
+  @include phones() {
+    width: 20.5rem;
+    height: 25.5rem;
+  }
   &__wrapper {
     display: block;
     margin: auto;
@@ -34,12 +38,6 @@
   }
   &__content {
     padding: 38px 20px;
-    @include tablets() {
-      padding: 38px 50px;
-    }
-    @include phones() {
-      padding: 38px 40px;
-    }
   }
 }
 .c-authorization-form {
