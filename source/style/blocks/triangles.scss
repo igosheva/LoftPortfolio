@@ -3,10 +3,11 @@
   display: block;
   height: 150px;
   position: absolute;
-  bottom: 100%;
+  bottom: 99.9%;
   width: 50%;
   @include desctop() {
     height: 100px;
+    bottom: 100%;
   }
   @include tablets() {
     height: 65px;

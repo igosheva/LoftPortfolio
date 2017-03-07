@@ -20,7 +20,10 @@
   &__background {
     @include centered(max);
     z-index: 0;
-    height: 1270px;
+    height: 119.375rem;
+    @include desctop() {
+      height: 80rem;
+    }
     @include tablets() {
       height: 650px;
     }
@@ -37,6 +40,10 @@
       display: block;
       margin: 0 auto;
       min-width: 100%;
+      min-height: 130%;
+      @include desctop() {
+        min-height: 100%;
+      }
       @include tablets() {
         height: 100%;
       }
@@ -79,8 +86,8 @@
 }
 
 .l-hero--blog {
-  height: 395px;
-  min-height: 395px;
+  height: 28.6875rem;
+  min-height: 28.6875rem;
   @include tablets() {
     min-height: 506px;
   }
