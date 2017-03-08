@@ -9,7 +9,7 @@
     min-width: 141px;
     max-width: 141px;
     height: 141px;
-    background: url('../images/face.jpg') no-repeat center 0/cover, #e2e2e2;
+    background: url('../images/face.jpg') no-repeat center 0/cover;
     border-radius: 50%;
     margin: 0 auto 25px;
     @include phones() {

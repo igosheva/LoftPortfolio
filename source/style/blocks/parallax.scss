@@ -1,7 +1,7 @@
 //Style for parallax of welcome section
 .l-parallax {
   height: 100%;
-  width: 120%;
+  width: 130%;
   z-index: -1;
   position: absolute;
   left:50%;
@@ -12,9 +12,6 @@
   @include background();
   background-position: center top;
   @include desctop() {
-    width: 110%;
-  }
-  @include phones() {
     width: 120%;
   }
   &__layer{
@@ -22,19 +19,10 @@
     left:46%;
     height: 100%;
     width: 100%;
-    margin-left: -54%;
-    @include desctop() {
-      left:42%;
-      margin-left: -53%;
-    }
-    @include tablets() {
-      margin-left: -58%;
-    }
+    margin-left: -48%;
     img {
-      position: absolute;
+      @include centered(stretchX);
       bottom: 0;
-      left:0;
-      right:0;
     }
   }
 }
