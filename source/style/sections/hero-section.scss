@@ -20,12 +20,12 @@
   &__background {
     @include centered(max);
     z-index: 0;
-    height: 119.375rem;
+    height: 170%;
     @include desctop() {
-      height: 80rem;
+      height: 130%;
     }
     @include tablets() {
-      height: 650px;
+      height: 40.625rem;
     }
     @include phones() {
       height: 50.43rem;
@@ -40,13 +40,7 @@
       display: block;
       margin: 0 auto;
       min-width: 100%;
-      min-height: 130%;
-      @include desctop() {
-        min-height: 100%;
-      }
-      @include tablets() {
-        height: 100%;
-      }
+      min-height: 100%;
     }
   }
   &__inner {

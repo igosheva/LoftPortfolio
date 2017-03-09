@@ -18,9 +18,9 @@ $(function () {
           style.webkitTransform = transformString;
         },
         init: function (wScroll) {
-          this.move(bg, wScroll, 45);
-          this.move(title, wScroll, 30);
-          this.move(user, wScroll, 6);
+          this.move(bg, wScroll, 45, 0);
+          this.move(title, wScroll, 15, 50);
+          this.move(user, wScroll, 5, 50);
         }
       }
     }());

@@ -22,7 +22,7 @@ mixin sectionTitle(svg, title, modificator)
 mixin blockTitle(title, modificator)
     .c-block-title__wrapper
         .c-block-title(class=`c-block-title--${modificator}`)
-            h4.c-block-title__text=title
+            h4.c-block-title__text.js-slider-subtitle= title
 mixin skillsList(items)
     ul.l-skills-list
         each item, modificator in items
