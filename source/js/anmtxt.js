@@ -1,49 +1,51 @@
-var aviatitle = {
-  generate: function (string, block) {
-    var wordsArray = string.split(' '),
-      stringArray = string.split(''),
-      sentence = [],
-      word = '';
+if ($('#slider').length) {
+  var aviatitle = {
+    generate: function (string, block) {
+      var wordsArray = string.split(' '),
+        stringArray = string.split(''),
+        sentence = [],
+        word = '';
 
-    block.text('');
+      block.text('');
 
-    wordsArray.forEach(function (currentWord) {
-      var wordsArray = currentWord.split('');
+      wordsArray.forEach(function (currentWord) {
+        var wordsArray = currentWord.split('');
 
-      wordsArray.forEach(function (letter) {
-        var letterHtml = '<span class="letter-span">' + letter + '</span>';
+        wordsArray.forEach(function (letter) {
+          var letterHtml = '<span class="letter-span">' + letter + '</span>';
 
-        word += letterHtml;
+          word += letterHtml;
+        });
+
+        var wordHTML = '<span class="letter-word">' + word + '</span>';
+
+        sentence.push(wordHTML);
+        word = '';
       });
 
-      var wordHTML = '<span class="letter-word">' + word + '</span>';
+      block.append(sentence.join(' '));
 
-      sentence.push(wordHTML);
-      word = '';
-    });
+      // анимация появления
+      var letters = block.find('.letter-span'),
+        counter = 0,
+        timer,
+        duration = 500 / stringArray.length;
 
-    block.append(sentence.join(' '));
+      function showLetters() {
+        var currentLetter = letters.eq(counter);
 
-    // анимация появления
-    var letters = block.find('.letter-span'),
-      counter = 0,
-      timer,
-      duration = 500 / stringArray.length;
+        currentLetter.addClass('active');
+        counter++;
 
-    function showLetters() {
-      var currentLetter = letters.eq(counter);
+        if (typeof timer !== 'undefined') {
+          clearTimeout(timer);
+        }
 
-      currentLetter.addClass('active');
-      counter++;
-
-      if (typeof timer !== 'undefined') {
-        clearTimeout(timer);
+        timer = setTimeout(showLetters, duration);
       }
 
-      timer = setTimeout(showLetters, duration);
+      showLetters();
+
     }
-
-    showLetters();
-
-  }
-};
+  };
+}

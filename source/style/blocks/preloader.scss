@@ -4,7 +4,11 @@
   z-index: 500;
   @include centered(max);
   background-color: #00bfa5;
-  height: 100vh;
+  height: 100%;
+  &__inner {
+    height: 100vh;
+    @include centered(max);
+  }
   &__spinner {
     width: 150px;
     height: 150px;

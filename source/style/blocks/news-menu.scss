@@ -1,0 +1,37 @@
+//Style for news-menu
+
+.l-news-menu {
+  position: fixed;
+  width: 50%;
+  height: 100vh;
+  background-color: #20b5a1;
+  left: 0;
+  top: 0;
+  opacity: .95;
+  transition: width .35s;
+  display: none;
+  @include tablets() {
+    display: block;
+  }
+  &.blocked {
+    width: 0;
+    font-size: 0;
+  }
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    text-align: right;
+    position: relative;
+  }
+  &__handler {
+    position: absolute;
+    right: -1.25rem;
+    top: 50%;
+    width: 1.25rem;
+    height: 2.5rem;
+    background: #20b5a1;
+    border-bottom-right-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+  }
+}
