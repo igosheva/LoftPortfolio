@@ -60,8 +60,9 @@
     margin-bottom: 20px;
     color: #373e42;
     opacity: .2;
-    @include background();
-    background-image: url('../images/commas.png');
+    background-position: -73px 0px;
+    background-repeat: no-repeat;
+    background-image: url('../images/sprite.png');
     width:33px;
     height: 29px;
     @include tablets() {

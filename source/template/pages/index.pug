@@ -1,11 +1,7 @@
 extends ../_template
 
 block variables
-  -
-    var
-        title = 'IGOSHEVA|Home',
-        description = 'IGOSHEVA|Homepage of website of web-developer Igosheva Nastasia',
-        keywords = 'website of web-developer Igosheva Nastasia, front-ent'
+    script(src='/assets/js/app.js' defer)
 
 block content
     section.l-section.l-welcome
@@ -29,7 +25,7 @@ block content
             .l-parallax__layer
                 img.l-parallax__layer-img(src='assets/images/parallax-10.png')
         .l-welcome__inner.l-section__wrapper
-            button.l-welcome__authorization.js-authorization Авторизоваться
+            button.l-welcome__authorization.js-authorization#authorization Авторизоваться
             .l-card__wrapper
                 .l-card
                     .l-card__welcome.active
@@ -49,6 +45,11 @@ block content
                         .l-card__content
                             +blockTitle('Авторизуйтесь', 'authorization')
                             +form('c-authorization-form', {'Логин':'text', 'Пароль': 'password'}, {})
+                            +checkbox('man', 'Я человек', 'checkbox')
+                            p.l-card__content-text Вы точно не робот?
+                            .l-card__content-radio
+                                +checkbox('radio', 'Да', 'radio', '1')
+                                +checkbox('radio', 'Не уверен', 'radio', '0')
                         +nav('nav-welcome', {
                             'На главную': './index.html',
                             'Войти': ''

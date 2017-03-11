@@ -1,4 +1,4 @@
-if ($('#slider').length) {
+var sliderCont = (function () {
   var Slider = function (container) {
     var nextBtn = container.find('.js-slider-bth--left'),
       prevBtn = container.find('.js-slider-bth--right'),
@@ -196,19 +196,27 @@ if ($('#slider').length) {
         changeMainPicture(_that.counter);
         changeTextData(_that.counter);
       }
-    };
+    }
   };
+  return {
+    init: function () {
+      var slider = new Slider($('.l-works__content'));
+      slider.setDefaults();
 
-  var slider = new Slider($('.l-works__content'));
-  slider.setDefaults();
+      $('.js-slider-bth--left').on('click', function (e) {
+        e.preventDefault();
+        slider.moveSlide('prev');
+      });
 
-  $('.js-slider-bth--left').on('click', function (e) {
-    e.preventDefault();
-    slider.moveSlide('prev');
-  });
-
-  $('.js-slider-bth--right').on('click', function (e) {
-    e.preventDefault();
-    slider.moveSlide('next');
-  });
-}
+      $('.js-slider-bth--right').on('click', function (e) {
+        e.preventDefault();
+        slider.moveSlide('next');
+      });
+    }
+  }
+}());
+$(function () {
+  if ($('#slider').length) {
+    sliderCont.init();
+  }
+});

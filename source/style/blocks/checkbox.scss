@@ -1,0 +1,88 @@
+.c-checkbox {
+  margin-bottom: 20px;
+  color: rgba(69, 90, 100, .8);
+  &__box {
+    width: 20px;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+    &--checkbox {
+      .c-checkbox__label {
+        cursor: pointer;
+        position: absolute;
+        width: 1.25rem;
+        height: 1.25rem;
+        top: 0;
+        left: 0;
+        color: #fff;
+        background: #00bfa5;
+        border-radius: 0.25rem;
+        border: none;
+        z-index: -1;
+        &:after {
+          opacity: 0;
+          content: '';
+          position: absolute;
+          width: 0.5625rem;
+          height: 0.3125rem;
+          background: 0 0;
+          top: 0.25rem;
+          left: 0.25rem;
+          border: 0.1875rem solid #fff;
+          border-top: none;
+          border-right: none;
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    &--radio {
+      .c-checkbox__label {
+        box-sizing: content-box;
+        cursor: pointer;
+        position: absolute;
+        width: 1.25rem;
+        height: 1.25rem;
+        top: 0;
+        left: 0;
+        color: #fff;
+        background: #fff;
+        border-radius: 50%;
+        border: 0.0625rem solid #ccc;
+        z-index: -1;
+        &:after {
+          opacity: 0;
+          content: '';
+          position: absolute;
+          width: 0.625rem;
+          height: 0.625rem;
+          background: #2cc7a7;
+          top: 0.3125rem;
+          left: 0.3125rem;
+          border-radius: 50%;
+          border-top: none;
+          border-right: none;
+        }
+      }
+    }
+  }
+  .c-checkbox__input {
+    z-index: 1111;
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  input[type=checkbox]:checked + .c-checkbox__label:after,
+  input[type=radio]:checked + .c-checkbox__label:after {
+    opacity: 1;
+  }
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.25;
+  }
+}

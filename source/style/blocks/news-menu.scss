@@ -8,14 +8,14 @@
   left: 0;
   top: 0;
   opacity: .95;
-  transition: width .35s;
+  transition: left .35s;
   display: none;
+  z-index: 111;
   @include tablets() {
     display: block;
   }
   &.blocked {
-    width: 0;
-    font-size: 0;
+    left: -50%;
   }
   &__wrapper {
     width: 100%;

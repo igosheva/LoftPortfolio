@@ -1,0 +1,65 @@
+.c-authorization-form {
+  margin-bottom: 20px;
+  &__item {
+    border: none;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 45px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    &:before {
+      content: '';
+      width:45px;
+      height: 45px;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left:0;
+      background-color: #f0efe9;
+      background-position: 15px 14px;
+      background-repeat: no-repeat;
+      background-image: url('../images/sprite.png');
+      @include phones() {
+        background-position: 0.9rem 0.875rem;
+      }
+    }
+    @include phones() {
+      margin-bottom: 1.5rem;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &:nth-child(2):before {
+      background-position: -20px 14px;
+      @include phones() {
+        background-position: -1.7rem 0.875rem;
+      }
+    }
+  }
+  &__input {
+    width: 100%;
+    border: none;
+    background-color: $white;
+    color: $sectionTitle;
+    padding: 13px 20px;
+    line-height: 1;
+    @include roboto;
+    outline: none;
+    font-size: $middleFont;
+    @include phones() {
+      padding: 1rem 1.25rem;
+    }
+    &::-webkit-input-placeholder {
+      color: rgba(55, 62, 66, .5);
+      @include roboto;
+    }
+    &:focus {
+      outline: none;
+      &::-webkit-input-placeholder {
+        opacity: 0;
+      }
+    }
+  }
+}

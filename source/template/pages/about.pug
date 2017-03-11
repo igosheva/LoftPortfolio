@@ -1,11 +1,8 @@
 extends ../_template
 
 block variables
-  -
-      var
-          title = 'IGOSHEVA|About me',
-          description = 'IGOSHEVA|About web-developer Igosheva Nastasia',
-          keywords = 'website of web-developer Igosheva Nastasia, front-ent, about Igosheva'
+  script(src='/assets/js/app.js' defer)
+
 block content
     .wrapper
         +hero()
@@ -49,7 +46,7 @@ block content
                                 +skillsList({
                                     html: 'HTML5',
                                     css: 'CSS3',
-                                    js: 'JavaScript& jQuery',
+                                    js: 'JavaScript & jQuery',
                                     react: 'React'
                                 })
                             li.l-skills-group__item
@@ -57,7 +54,7 @@ block content
                                 +skillsList({
                                     php: 'PHP',
                                     mySQL: 'mySQL',
-                                    npm: 'Node.js& npm',
+                                    npm: 'Node.js & npm',
                                     mongo: 'Mongo.db'
                                 })
                             li.l-skills-group__item

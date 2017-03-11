@@ -42,7 +42,7 @@ mixin rightTriangle(modificator)
         polygon(points="0,150 1000,150 1000,0")
 
 mixin arrow(modificator)
-    svg.c-arrow(class=`c-arrow--${modificator}` viewBox="0 0 25.18 16.164")
+    svg.c-arrow#arrow(class=`c-arrow--${modificator}` viewBox="0 0 25.18 16.164")
         use(xlink:href="assets/images/sprite.svg#icons--arrow_down")
 
 mixin form(className, items, textarea)
@@ -55,3 +55,9 @@ mixin form(className, items, textarea)
             fieldset(class=`${className}__item`)
                 label(class=`${className}__lebel`)
                     textarea(class=`${className}__textarea`, name=type, placeholder=item)
+mixin checkbox(item, text, type, value)
+    div(class=`c-checkbox`)
+        div(class=`c-checkbox__box c-checkbox__box--${type}`)
+            input(class=`c-checkbox__input c-checkbox__${item}`, value=value, name=item, type=type)
+            label(class=`c-checkbox__label`)
+        p(class=`c-checkbox__text`)=text

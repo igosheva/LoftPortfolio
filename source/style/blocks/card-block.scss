@@ -39,55 +39,19 @@
   &__content {
     padding: 38px 20px;
   }
-}
-.c-authorization-form {
-  &__item {
-    border: none;
-    margin: 0;
+  &__content-text {
+    font-weight: 700;
+    color:  rgba(69, 90, 100, .8);
     margin-bottom: 20px;
-    padding: 0;
-    padding-left: 45px;
-    position: relative;
-    border-radius: 4px;
-    overflow: hidden;
-    &:before {
-      content: '';
-      width:45px;
-      height: 45px;
-      position: absolute;
-      top:0;
-      bottom: 0;
-      left:0;
-      background-color: #f0efe9;
-    }
-    @include phones() {
-      margin-bottom: 1.5rem;
-    }
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
-  &__input {
-    width: 100%;
-    border: none;
-    background-color: $white;
-    color: $sectionTitle;
-    padding: 13px 20px;
-    line-height: 1;
-    @include roboto;
-    outline: none;
-    font-size: $middleFont;
-    @include phones() {
-      padding: 1rem 1.25rem;
-    }
-    &::-webkit-input-placeholder {
-      color: rgba(55, 62, 66, .5);
-      @include roboto;
-    }
-    &:focus {
-      outline: none;
-      &::-webkit-input-placeholder {
-        opacity: 0;
+  &__content-radio {
+    display: flex;
+    justify-content: center;
+    .c-checkbox {
+      margin-bottom: 0;
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

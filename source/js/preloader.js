@@ -1,5 +1,4 @@
 var preloader = (function () {
-
   var
     preloader = $('.preloader'),
     persentsTotal = 0;
@@ -50,7 +49,6 @@ var preloader = (function () {
   };
 
   return {
-
     init: function () {
       var imgs = imgPath.toArray();
       loadImages(imgs);
