@@ -2,6 +2,7 @@
 
 module.exports = [
   './source/js/app.js',
+  './source/js/authorization.js',
   './source/js/preloader.js',
   './source/js/anmtxt.js',
   './source/js/slider.js',

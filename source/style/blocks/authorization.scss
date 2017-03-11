@@ -1,5 +1,14 @@
 .c-authorization-form {
   margin-bottom: 20px;
+  margin-top: 40px;
+  &__validation {
+    position: absolute;
+    top: 5rem;
+    left:0;
+    right:0;
+    color: red;
+    padding: 0 20px;
+  }
   &__item {
     border: none;
     margin: 0;

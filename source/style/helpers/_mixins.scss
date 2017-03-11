@@ -40,6 +40,12 @@
   }
 }
 
+@mixin maxDesctop() {
+  @media only screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
 @mixin desctop() {
   @media only screen and (max-width: 1200px) {
     @content;

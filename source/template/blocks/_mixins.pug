@@ -58,6 +58,6 @@ mixin form(className, items, textarea)
 mixin checkbox(item, text, type, value)
     div(class=`c-checkbox`)
         div(class=`c-checkbox__box c-checkbox__box--${type}`)
-            input(class=`c-checkbox__input c-checkbox__${item}`, value=value, name=item, type=type)
+            input(class=`c-checkbox__input`, value=value, id=item, name=item, type=type)
             label(class=`c-checkbox__label`)
         p(class=`c-checkbox__text`)=text

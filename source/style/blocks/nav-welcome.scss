@@ -31,11 +31,17 @@
   }
   &__link {
     color: $white;
+    background-color: #10c1a8;
     padding: 6.5px 32px;
     line-height: 2;
     display: block;
     font-weight: $mediumFont;
     font-size: $middleFont;
+    border: none;
+    outline: none;
+    width: 100%;
+    @include roboto;
+    cursor: pointer;
     @include tablets() {
       padding: 6.5px 26px;
     }

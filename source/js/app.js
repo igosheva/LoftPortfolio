@@ -37,35 +37,11 @@ var Hamburger = (function () {
   }
 }());
 
-var Authorization = (function () {
-  var
-    authorization = $('.js-authorization'),
-    card = $('.l-card__wrapper');
-
-  return {
-    init: function () {
-      authorization.on('click', function (e) {
-        e.preventDefault();
-
-        var _this = $(this);
-
-        _this.toggleClass('active');
-        setTimeout(function () {
-          card.toggleClass('active');
-        }, 500);
-      });
-    }
-  }
-}());
-
 $(function () {
   if ($('#hamburger').length) {
     Hamburger.init();
   }
   if ($('#arrow').length) {
     Arrow.init();
-  }
-  if ($('#authorization').length) {
-    Authorization.init();
   }
 });
