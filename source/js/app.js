@@ -1,3 +1,5 @@
+//Срелка скрола к нужному блоку
+
 var Arrow = (function () {
 
   return {
@@ -14,6 +16,7 @@ var Arrow = (function () {
   }
 }());
 
+//Гамбургер-меню
 var Hamburger = (function () {
   var
     hamburger = $('.js-hamburger'),

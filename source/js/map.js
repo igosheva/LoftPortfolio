@@ -1,3 +1,4 @@
+//Карта на странице "обо мне"
 
 $(function () {
 	var Maps;
@@ -15,6 +16,7 @@ $(function () {
 				}
 		}
 	};
+
 	//  Для быстрого использования
 	var clickEvent = Utils.clickEvent,
 						_log = Utils.log;
@@ -24,7 +26,7 @@ $(function () {
 				var script = document.createElement('script');
 				script.type = 'text/javascript';
 				script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-						'callback=initMap&key=AIzaSyDv5SXOEM0fA4saFt7tFSsOjdMjVtvcvPE';
+						'callback=initMap&key=AIzaSyCoinv0op00s_n1cclfA0ExKG-yrhCGTq4';
 				document.body.appendChild(script);
 		},
 		initSettings: function() {
@@ -32,9 +34,122 @@ $(function () {
 				this.map = null;
 				this.marker = null;
 				this.settings = {
-						zoom: 16,
-						center: new google.maps.LatLng(59.936746, 30.287086),
+						zoom: 12,
+						center: new google.maps.LatLng(60.011695, 30.256744),
 						mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [
+              {
+                  "featureType": "administrative",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                      {
+                          "color": "#444444"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "landscape",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "color": "#ffffff"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "landscape",
+                  "elementType": "labels",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "poi",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "road.highway",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "visibility": "simplified"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "road.highway",
+                  "elementType": "geometry",
+                  "stylers": [
+                      {
+                          "color": "#d5d5d5"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "road.arterial",
+                  "elementType": "geometry.fill",
+                  "stylers": [
+                      {
+                          "color": "#d6d6d6"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "road.local",
+                  "elementType": "geometry.fill",
+                  "stylers": [
+                      {
+                          "color": "#d6d6d6"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "road.arterial",
+                  "elementType": "labels.icon",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "transit",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "water",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "color": "#61dac9"
+                      },
+                      {
+                          "visibility": "on"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "water",
+                  "elementType": "labels",
+                  "stylers": [
+                      {
+                          "color": "#61dac9"
+                      },
+                  ]
+              }
+            ],
 						scrollwheel: false,
 						mapTypeControl: false,
 						panControl: true,
@@ -53,11 +168,11 @@ $(function () {
 				_log( "Map: init Map" );
 				Maps.initSettings();
 				Maps.map = new google.maps.Map(document.getElementById('map'),
-						Maps.settings );
+						Maps.settings);
 				Maps.marker = new google.maps.Marker({
 						map: Maps.map,
 						draggable: false,
-						position: new google.maps.LatLng(59.936746, 30.287086)
+						position: new google.maps.LatLng(60.011695, 30.256744)
 				});
 		}
 	};
@@ -68,7 +183,6 @@ $(function () {
 	Routes = {
 		init: function() {
 			_log( "Routes: init" );
-			//  Подключаем Google Maps на странице «Контакты»
 				Maps.load();
 		}
 	};

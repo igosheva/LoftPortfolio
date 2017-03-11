@@ -1,3 +1,4 @@
+//Параллакс
 var ParallaxScroll = (function () {
   return {
     init: function () {

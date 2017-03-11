@@ -1,5 +1,5 @@
-mixin footer()
-    .l-footer
+mixin footer(className)
+    .l-footer(class=`l-footer--${className}`)
         .l-footer__top
             .l-footer__top-content.l-section__wrapper
                 +nav('c-footer-nav', {

@@ -1,12 +1,12 @@
 //Style for form of feedback
 .c-feedback {
   &__bg {
-    filter: blur(20px);
+    filter: blur(4px);
     background-image: url('../images/bg-footer.png');
     @include centered(max);
-    @include background();
     background-size: 946px;
     z-index: -1;
+    background-repeat: no-repeat;
   }
   &__wrapper {
     max-width: 380px;
@@ -32,6 +32,14 @@
     @include phones() {
       padding: 2.6rem 1.25rem 1.3rem;
     }
+  }
+  &__validation {
+    position: absolute;
+    top: 5rem;
+    left:0;
+    right:0;
+    color: red;
+    padding: 0 20px;
   }
 }
 

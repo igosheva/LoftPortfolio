@@ -1,3 +1,4 @@
+//прелоадер для всех страниц
 var preloader = (function () {
   var
     preloader = $('.preloader'),

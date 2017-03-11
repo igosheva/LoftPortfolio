@@ -54,8 +54,8 @@ block content
                                     svg.c-slider-arrow__img
                                         use(xlink:href="assets/images/sprite.svg#icons--arrow_down")
         section.l-section.l-reviews
-            .l-reviews__background.js-reviews-bg
-                img(src='assets/images/bg-footer.png')
+            .l-reviews__background
+                img.js-reviews-bg(src='assets/images/bg-footer.png')
             +sectionTitle('about_header', 'Что обо мне говорят', 'reviews')
             ul.l-reviews-list
                 li.c-reviews-item
@@ -78,14 +78,24 @@ block content
                         .c-reviews-hero__content
                             p.c-reviews-hero__name Сабанцев Владимир
                             p преподаватель
-            .c-feedback__wrapper.js-feedback-wrapper#feedbackForm
+            form.c-feedback__wrapper.js-feedback-wrapper#feedbackForm(method='post', action='')
                 .c-feedback__bg.js-feedback-bg
                 .c-feedback
                     .c-feedback__inner
                         +blockTitle('Связаться со мной', 'feedback')
-                        +form('c-feedback-form', {'Имя':'text', 'Email': 'email'},{'Ваше сообщение':'textarea'})
+                        .c-feedback-form
+                            .c-feedback-form__item
+                                label.c-feedback-form__lebel
+                                    input.c-feedback-form__input(name='text', type='text', placeholder='Имя', required)
+                            .c-feedback-form__item
+                                label.c-feedback-form__lebel
+                                    input.c-feedback-form__input(name='email', type='email', placeholder='Email', required)
+                            .c-feedback-form__item
+                                label.c-feedback-form__lebel
+                                    textarea.c-feedback-form__textarea(name='textarea', placeholder='Ваше сообщение', required)
                     .c-feedback-buttons
-                        button.c-feedback-button.c-feedback-button--send Отправить
-                        button.c-feedback-button.c-feedback-button--clear Очистить
+                        input.c-feedback-button.c-feedback-button--send(type='submit', value='Отправить')
+                        input.c-feedback-button.c-feedback-button--clear(type='reset', value='Очистить')
             +arrow('feedback')
-        +footer()
+        +footer('portfolio')
+        +popup()

@@ -1,3 +1,4 @@
+//Блог на странице "блог"
 var scrollMenu = (function () {
   var $news = $('.l-blog-data'),
     $item = $('.js-blog-item'),

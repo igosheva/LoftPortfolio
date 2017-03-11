@@ -5,6 +5,7 @@
   @include centered(max);
   background-color: #00bfa5;
   height: 100%;
+  background-image: url("../images/bg-blue.jpg");
   &__inner {
     height: 100vh;
     @include centered(max);

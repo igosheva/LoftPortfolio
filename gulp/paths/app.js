@@ -8,6 +8,7 @@ module.exports = [
   './source/js/slider.js',
   './source/js/map.js',
   './source/js/parallax.js',
-  './source/js/form.js',
+  './source/js/blur.js',
+  './source/js/feedback-form.js',
   './source/js/blog.js'
 ];

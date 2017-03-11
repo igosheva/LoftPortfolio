@@ -1,3 +1,5 @@
+//Анимация для букв слайдера на странице "портфолио"
+
 if ($('#slider').length) {
   var aviatitle = {
     generate: function (string, block) {

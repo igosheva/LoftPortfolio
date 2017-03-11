@@ -41,11 +41,17 @@ block content
                             'Обо мне': './about.html',
                             'Блог': './blog.html'
                         })
-                    .l-card__authorization#authorization
+                    form.l-card__authorization#authorization(method='post', action='')
                         .l-card__content
                             +blockTitle('Авторизуйтесь', 'authorization')
-                            .greeting-box__validation#validation-message
-                            +form('c-authorization-form', {'Логин':'text', 'Пароль': 'password'}, {})
+                            .c-authorization-form__validation#validation1
+                            .c-authorization-form
+                                .c-authorization-form__item
+                                    label.c-authorization-form__lebel
+                                        input.c-authorization-form__input(name='text', type='text', placeholder='Логин', required)
+                                .c-authorization-form__item
+                                    label.c-authorization-form__lebel
+                                        input.c-authorization-form__input(name='password', type='password', placeholder='Пароль', required)
                             +checkbox('noRobot', 'Я человек', 'checkbox')
                             p.l-card__content-text Вы точно не робот?
                             .l-card__content-radio

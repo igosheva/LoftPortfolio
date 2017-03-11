@@ -1,3 +1,4 @@
+//Авторизация на главной странице
 var AuthorizationButton = (function () {
   var
     authorization = $('.js-authorization'),
@@ -26,9 +27,9 @@ var AuthorizationSubmit = (function () {
         event.preventDefault();
 
         if (!($("#noRobot").prop("checked") && $('input[name=radio]:checked', '#authorization').val() == 1)) {
-            $("#validation").text('Роботы нам не нужны');
+            $("#validation1").text('Роботы нам не нужны');
         } else {
-            $("#validation").text('Верю, что человек. Сабмит реализую позже');
+            $("#validation1").text('Верю, что человек. Сабмит реализую позже');
         }
       });
     }
@@ -43,17 +44,3 @@ $(function () {
     AuthorizationSubmit.init();
   }
 });
-
-/*
-$("#connect-me-form").submit(function (event) {
-    $('input[name=name]', "#connect-me-form").val('');
-    $('input[name=email]', "#connect-me-form").val('');
-    $('input[name=message]', "#connect-me-form").val('');
-    $("#validation-message").text('Форму отправлено');
-
-    event.preventDefault();
-});
-
-$('input', "#connect-me-form").on('change', function () {
-    $("#validation-message").text('');
-});*/

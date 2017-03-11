@@ -29,6 +29,13 @@
   &--feedback {
     margin: 0 auto;
     transform: rotate(180deg);
+    margin-bottom: 70px;
+    @include tablets() {
+      margin-bottom: 4.375rem;
+    }
+    @include phones() {
+      margin-bottom: 4.375rem;
+    }
   }
   &--blog {
     display: none;

@@ -1,3 +1,5 @@
+//Слайдер на странице "портфолио"
+
 var sliderCont = (function () {
   var Slider = function (container) {
     var nextBtn = container.find('.js-slider-bth--left'),
