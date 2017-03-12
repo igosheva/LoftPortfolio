@@ -8,7 +8,7 @@
     width:100%;
     top:0;
     z-index: 10;
-    background: $beige;
+    background: #e1e4d7;
     @include desctop() {
       padding: 100px 56px;
     }
@@ -56,9 +56,7 @@
     outline: none;
     overflow: hidden;
     height: 100%;
-    //background: radial-gradient(ellipse at center, #ffffff 0%, #c5c5c5 100%);
     float: left;
-    //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#c5c5c5', GradientType=1);
     display: block;
     @include desctop() {
       padding: 0 10px;
@@ -71,12 +69,13 @@
     }
     &:after {
       content: '';
-      background-color: rgba(182, 180, 174, .7);
+      background-color: rgba(0, 0, 0, 0.3);
       @include centered(max);
+      transition: all .5s;
     }
     &:hover {
       &:after {
-        background-color: rgba(136, 131, 114, .5);
+        background-color: rgba(0, 0, 0, 0.1);
       }
       .c-slider-arrow__img {
         transform: translate(-50%, -30%);

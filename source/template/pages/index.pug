@@ -25,7 +25,7 @@ block content
             .l-parallax__layer
                 img.l-parallax__layer-img(src='assets/images/parallax-10.png')
         .l-welcome__inner.l-section__wrapper
-            button.l-welcome__authorization.js-authorization#authorizationButton Авторизоваться
+            button.l-welcome__authorization.js-authorization.active#authorizationButton Авторизоваться
             .l-card__wrapper
                 .l-card
                     .l-card__welcome.active
@@ -60,8 +60,8 @@ block content
                         .nav-welcome
                             ul.nav-welcome__list
                                 li.nav-welcome__item
-                                    a(class='nav-welcome__link', href='./index.html') На главную
+                                    a.nav-welcome__link.js-authorization На главную
                                 li.nav-welcome__item
-                                    input(class='nav-welcome__link', type='submit', value='Войти')
+                                    input.nav-welcome__link(type='submit', value='Войти')
             footer.l-welcome__footer
                 p © Игошева Анастасия | создано с любовью в LoftSchool | 2017

@@ -19,8 +19,18 @@
     margin: auto;
     overflow: hidden;
     text-align: center;
-    &.active .l-card{
-      transform: rotateY(180deg);
+    opacity: 0;
+    &.active {
+      animation-name: menu;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      transform-origin: 0 0;
+      animation-fill-mode: forwards;
+    }
+    &.flip {
+      .l-card{
+        transform: rotateY(180deg);
+      }
     }
   }
   &__welcome, &__authorization {
@@ -54,5 +64,27 @@
         margin-right: 0;
       }
     }
+  }
+}
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: rotateX(-120deg);
+  }
+  20% {
+      transform: rotateX(-50deg);
+  }
+  40% {
+      transform: rotateX(-10deg);
+  }
+  60% {
+      transform: rotateX(20deg);
+  }
+  80% {
+      transform: rotateX(-10deg);
+  }
+  100% {
+      transform: rotateX(0deg);
+      opacity: 1;
   }
 }

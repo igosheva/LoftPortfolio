@@ -2,19 +2,17 @@
 var AuthorizationButton = (function () {
   var
     authorization = $('.js-authorization'),
-    card = $('.l-card__wrapper');
+    cardFlip = $('.l-card__wrapper');
 
   return {
     init: function () {
       authorization.on('click', function (e) {
         e.preventDefault();
 
-        var _this = $(this);
-
-        _this.toggleClass('active');
+        $('#authorizationButton').toggleClass('active');
         setTimeout(function () {
-          card.toggleClass('active');
-        }, 500);
+          cardFlip.toggleClass('flip');
+        }, 100);
       });
     }
   }

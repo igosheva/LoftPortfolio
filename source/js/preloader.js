@@ -2,7 +2,8 @@
 var preloader = (function () {
   var
     preloader = $('.preloader'),
-    persentsTotal = 0;
+    persentsTotal = 0,
+    cardAnimate = $('.l-card__wrapper');
   var imgPath = $('*').map(function (ind, element) {
 
     var
@@ -28,6 +29,7 @@ var preloader = (function () {
 
     if (persents >= 100) {
       preloader.fadeOut();
+      cardAnimate.addClass('active');
     }
   };
 
