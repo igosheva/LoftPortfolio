@@ -29,7 +29,7 @@ var AuthorizationSubmit = (function () {
         if (!($("#noRobot").prop("checked") && $('input[name=radio]:checked', '#authorization').val() == 1)) {
             $("#validation1").text('Роботы нам не нужны');
         } else {
-            $("#validation1").text('Верю, что человек. Сабмит реализую позже');
+            $("#validation1").text('Замечательно! Сабмит реализую позже');
         }
       });
     }

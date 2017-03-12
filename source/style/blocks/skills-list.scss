@@ -57,6 +57,7 @@
   stroke: $green;
   transition: all 1s;
   opacity: .93;
+  stroke-dasharray: 0 360;
   @include desctop() {
     r:45;
     cy: 50%;
@@ -64,42 +65,153 @@
   }
 }
 
-.c-skill__circle
+.c-skills-list__item.active {
   .c-skills__circle-above {
     &--html {
-      stroke-dasharray: 300 360;
+      animation: html 2s ease forwards;
     }
     &--css {
-      stroke-dasharray: 250 360;
+      animation: css 2s ease forwards;
+      animation-delay: .5s;
     }
     &--js {
-      stroke-dasharray: 150 360;
+      animation: js 2s ease forwards;
+      animation-delay: 1s;
     }
     &--react {
-      stroke-dasharray: 100 360;
+      animation: react 2s ease forwards;
+      animation-delay: 1.5s;
     }
     &--php {
-      stroke-dasharray: 50 360;
+      animation: php 2s ease forwards;
     }
     &--mySQL {
-      stroke-dasharray: 10 360;
+      animation: mySQL 2s ease forwards;
+      animation-delay: .5s;
     }
     &--npm {
-      stroke-dasharray: 100 360;
+      animation: npm 2s ease forwards;
+      animation-delay: 1s;
     }
     &--mongo {
-      stroke-dasharray: 10 360;
+      animation: mongo 2s ease forwards;
+      animation-delay: 1.5s;
     }
     &--git {
-      stroke-dasharray: 300 360;
+      animation: git 2s ease forwards;
     }
     &--gulp {
-      stroke-dasharray: 250 360;
+      animation: gulp 2s ease forwards;
+      animation-delay: .5s;
     }
     &--webpack {
-      stroke-dasharray: 200 360;
+      animation: webpack 2s ease forwards;
+      animation-delay: 1s;
     }
     &--bower {
-      stroke-dasharray: 250 360;
+      animation: bower 2s ease forwards;
+      animation-delay: 1.5s;
     }
+  }
+}
+.toSkills {
+
+}
+
+@keyframes html {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 300 360;
+  }
+}
+@keyframes css {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 250 360;
+  }
+}
+@keyframes js {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 150 360;
+  }
+}
+
+@keyframes react {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 100 360;
+  }
+}
+@keyframes php {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 50 360;
+  }
+}
+@keyframes mySQL {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 10 360;
+  }
+}
+@keyframes npm {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 100 360;
+  }
+}
+@keyframes mongo {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 10 360;
+  }
+}
+@keyframes git {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 300 360;
+  }
+}
+@keyframes gulp {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 250 360;
+  }
+}
+@keyframes webpack {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 200 360;
+  }
+}
+@keyframes bower {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 200 360;
+  }
 }

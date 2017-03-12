@@ -6,6 +6,7 @@ module.exports = [
   './source/js/preloader.js',
   './source/js/anmtxt.js',
   './source/js/slider.js',
+  './source/js/animate-skills.js',
   './source/js/map.js',
   './source/js/parallax.js',
   './source/js/blur.js',
