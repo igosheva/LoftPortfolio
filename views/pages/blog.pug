@@ -1,0 +1,12 @@
+extends ../_template
+
+block content
+  include ../blocks/_menu
+
+
+  ul.article-wrap
+      each index in db
+          li.article
+            .article__title= index.title
+            .article__data= index.data
+            .article__text= index.body

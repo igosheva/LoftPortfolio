@@ -26,9 +26,16 @@
     "gulp-svgmin": "~1.2.2",
     "gulp-zip": "^4.0.0",
     "gulp.spritesmith": "^6.3.0",
-    "merge-stream": "^1.0.1"
+    "merge-stream": "^1.0.1",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "formidable": "^1.1.1",
+    "morgan": "^1.8.1",
+    "nodemailer": "^3.1.4",
+    "nodemailer-smtp-transport": "^2.7.2",
     "normalize.css": "~5.0.0",
     "jquery": "~3.1.1"
   },

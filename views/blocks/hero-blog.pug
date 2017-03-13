@@ -1,0 +1,14 @@
+mixin hero-blog()
+    section.l-section.l-hero.l-hero--blog#parallaxScroll
+        .l-hero__background.js-hero-bg
+            img(src='assets/images/bg-main.jpg')
+        .l-section__wrapper.l-hero__inner
+            +ul('c-social', 'hero', {vk:'https://vk.com/igosh', github:'https://github.com/igosheva', in:'https://github.com/igosheva'})
+            .l-hero__content
+                svg.js-hero-title.c-section-title__img.c-section-title__img--blog(viewBox="0 0 302.193 208.012")
+                    use(xlink:href="assets/images/sprite.svg#icons--blog_header")
+                .c-section-title.c-section-title--blog.js-user
+                    .c-user__face
+                    h2.c-section-title__text Блог
+                    p.c-section-title__extra Статьи, которые я написала
+            +arrow('hero')

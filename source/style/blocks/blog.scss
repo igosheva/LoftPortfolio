@@ -1,0 +1,27 @@
+.article-wrap {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.article {
+  list-style-type: none;
+}
+
+.article__title {
+  font: 25px Arial, Helvetica, sans-serif;
+  color: #E74C3C;
+  padding: 10px;
+}
+
+.article__data {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #73990F;
+  padding: 10px 0;
+}
+.article__text {
+  font: 12px Verdana, Helvetica, sans-serif;
+  color: #34495E;
+  line-height: 1.5;
+}

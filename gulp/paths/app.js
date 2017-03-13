@@ -11,5 +11,6 @@ module.exports = [
   './source/js/parallax.js',
   './source/js/blur.js',
   './source/js/feedback-form.js',
-  './source/js/blog.js'
+  './source/js/blog.js',
+  './source/js/mail.js'
 ];

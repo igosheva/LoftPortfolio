@@ -1,0 +1,99 @@
+extends ../_template
+
+block content
+    +preloader()
+    .wrapper
+        +hero()
+        +hamburger()
+        +navigation()
+        section.l-section.l-works.js-section-two
+            +leftTriangle('works')
+            +rightTriangle('works')
+            +sectionTitle('works_header', 'Мои работы', 'works')
+            .l-works__content#slider
+                .l-works__col_left
+                    .l-works__wrapper.l-works__wrapper--left
+                        .c-slider__image-wrapper.js-slider-display
+                            img.c-slider__image.js-slider-display-img(src='assets/images/resume.jpg', alt='project-image', title='project-image')
+                        .c-work
+                            +blockTitle('Личный сайт Игошевой Анастасии')
+                            p.c-work__tehnologes.js-slider-tehnologes HTML5, CSS3, PUG, STYLUS, JAVASCRIPT
+                            a.c-work__link.js-slider-site(href='https://www.igosheva-am.ru', target="_blank")
+                                span.c-work__link-text Посмотреть сайт
+                                    svg.c-work__link-icon
+                                        use(xlink:href="assets/images/sprite.svg#icons--link")
+                .l-works__col_right
+                    .c-slider.l-works__wrapper.l-works__wrapper--right
+                        .c-slider-list
+                            a.c-slider-list__link.js-slider-bth--left(href='#')
+                                ul.c-slider-list__list.js-slider-list
+                                    li.c-slider-list__item.js-slider-item(data-full='assets/images/resume.jpg', data-title='my website', data-skills='HTML5, CSS3, PUG, STYLUS, WEBPACK, JQUERY', data-link='https://www.igosheva-am.ru')
+                                        img.c-slider-list__image(src='assets/images/resume.jpg', alt='resume', title='resume')
+                                    li.c-slider-list__item.js-slider-item(data-full='assets/images/fiato.jpg', data-title='Fiato group', data-skills='HTML5, CSS3, SASS, GULP, JAVASCRIPT', data-link='http://fiatogroup.ru/')
+                                        img.c-slider-list__image(src='assets/images/fiato.jpg', alt='fiato', title='fiato')
+                                    li.c-slider-list__item.js-slider-item(data-full='assets/images/jason-wood.png', data-title='Portfolio Jason Wood', data-skills='HTML5, CSS3, PUG, STYLUS, WEBPACK, JQUERY', data-link='https://igosheva.github.io/JWood#start')
+                                        img.c-slider-list__image(src='assets/images/jason-wood.png', alt='jason-wood', title='jason-wood')
+                                    li.c-slider-list__item.js-slider-item.active(data-full='assets/images/gel.jpg', data-title='Gelion', data-skills='HTML5, CSS3, PUG, STYLUS, GULP, JQUERY', data-link='http://ptk-gelion.ru/')
+                                        img.c-slider-list__image(src='assets/images/gel.jpg', alt='Gelion', title='Gelion')
+                                .c-slider-arrow(href='#')
+                                    svg.c-slider-arrow__img
+                                        use(xlink:href="assets/images/sprite.svg#icons--arrow_down")
+                            a.c-slider-list__link.js-slider-bth--right(href='#')
+                                ul.c-slider-list__list.js-slider-list
+                                    li.c-slider-list__item.js-slider-item(data-full='assets/images/resume.jpg', data-title='my website', data-skills='HTML5, CSS3, PUG, STYLUS, WEBPACK, JQUERY', data-link='https://www.igosheva-am.ru')
+                                        img.c-slider-list__image(src='assets/images/resume.jpg', alt='resume', title='resume')
+                                    li.c-slider-list__item.js-slider-item.active(data-full='assets/images/fiato.jpg', data-title='Fiato group', data-skills='HTML5, CSS3, SASS, GULP, JAVASCRIPT', data-link='http://fiatogroup.ru/')
+                                        img.c-slider-list__image(src='assets/images/fiato.jpg', alt='fiato', title='fiato')
+                                    li.c-slider-list__item.js-slider-item(data-full='assets/images/jason-wood.png', data-title='Portfolio Jason Wood', data-skills='HTML5, CSS3, PUG, STYLUS, WEBPACK, JQUERY', data-link='https://igosheva.github.io/JWood#start')
+                                        img.c-slider-list__image(src='assets/images/jason-wood.png', alt='jason-wood', title='jason-wood')
+                                    li.c-slider-list__item.js-slider-item(data-full='assets/images/gel.jpg', data-title='Gelion', data-skills='HTML5, CSS3, PUG, STYLUS, GULP, JQUERY', data-link='http://ptk-gelion.ru/')
+                                        img.c-slider-list__image(src='assets/images/gel.jpg', alt='Gelion', title='Gelion')
+                                .c-slider-arrow.c-slider-arrow--top
+                                    svg.c-slider-arrow__img
+                                        use(xlink:href="assets/images/sprite.svg#icons--arrow_down")
+        section.l-section.l-reviews
+            .l-reviews__background
+                img.js-reviews-bg(src='assets/images/bg-footer.png')
+            +sectionTitle('about_header', 'Что обо мне говорят', 'reviews')
+            ul.l-reviews-list
+                li.c-reviews-item
+                    i.c-reviews-item__icon
+                    p.c-reviews-item__text
+                        |Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых
+                        |тяжелых испытаний и бессонных ночей!
+                    .c-reviews-hero
+                        img.c-reviews-hero__img(src='assets/images/dmitriy.jpg', alt='review-hero', title='review-hero')
+                        .c-reviews-hero__content
+                            p.c-reviews-hero__name Ковальчук Дмитрий
+                            p основатель Loftschool
+                li.c-reviews-item
+                    i.c-reviews-item__icon
+                    p.c-reviews-item__text
+                        |Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых
+                        |браузерах!
+                    .c-reviews-hero
+                        img.c-reviews-hero__img(src='assets/images/vladimir.jpg', alt='review-hero', title='review-hero')
+                        .c-reviews-hero__content
+                            p.c-reviews-hero__name Сабанцев Владимир
+                            p преподаватель
+            form.c-feedback__wrapper.js-feedback-wrapper#feedbackForm(method='post', action='')
+                .c-feedback__bg.js-feedback-bg
+                .c-feedback
+                    .c-feedback__inner
+                        +blockTitle('Связаться со мной', 'feedback')
+                        .c-feedback-form
+                            .c-feedback-form__item
+                                label.c-feedback-form__lebel
+                                    input.c-feedback-form__input(name='text', type='text', placeholder='Имя', required)
+                            .c-feedback-form__item
+                                label.c-feedback-form__lebel
+                                    input.c-feedback-form__input(name='email', type='email', placeholder='Email', required)
+                            .c-feedback-form__item
+                                label.c-feedback-form__lebel
+                                    textarea.c-feedback-form__textarea(name='textarea', placeholder='Ваше сообщение', required)
+                    .c-feedback-buttons
+                        input.c-feedback-button.c-feedback-button--send(type='submit', value='Отправить')
+                        input.c-feedback-button.c-feedback-button--clear(type='reset', value='Очистить')
+            +arrow('feedback')
+        +footer('portfolio')
+        +popup()
