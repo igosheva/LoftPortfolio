@@ -1,12 +1,31 @@
 extends ../_template
 
 block content
-  include ../blocks/_menu
-
-
-  ul.article-wrap
-      each index in items
-          li.article
-              .article__title= index.title
-              .article__data= index.date
-              .article__text= index.body
+    +preloader()
+    .wrapper
+        +hero-blog()
+        +hamburger()
+        +navigation()
+        section.l-section.l-blog.js-section-two#blog
+            +leftTriangle('blog')
+            +rightTriangle('blog')
+            .l-blog-inner.l-section__wrapper
+                aside.l-blog-nav
+                    .l-blog-nav__inner.js-blog-inner
+                        ul.l-blog-nav__list.js-blog-nav
+                            each index in items
+                                li.l-blog-nav__item.js-blog-item= index.title
+                ul.l-blog-content
+                    each index in items
+                        li.l-blog-content__data.l-blog-data.active
+                            .l-blog-content__title= index.title
+                            .l-blog-content__date= index.date
+                            .l-blog-content__text= index.body
+            +footer('blog')
+            .l-news-menu.blocked
+                .l-news-menu__wrapper
+                    a.l-news-menu__handler
+                    ul.l-blog-nav__list.js-blog-nav
+                        li.l-blog-nav__item.l-blog-nav__item--news.active.js-blog-item Самое важное в SASS
+                        li.l-blog-nav__item.l-blog-nav__item--news.js-blog-item Приёмы в вёрстке, без которых не обходится ни один сайт
+                        li.l-blog-nav__item.l-blog-nav__item--news.js-blog-item Самый необходимый набор Gulp плагинов

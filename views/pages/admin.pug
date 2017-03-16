@@ -1,0 +1,71 @@
+extends ../_template
+
+block content
+    .feedback
+        .feedback__body
+            span.feedback__text Сообщение отправлено
+            a.feedback__but(href='javascript:;') Закрыть
+
+    .preloader
+        .preloader__spinner
+            .preloader__animation
+            .preloader__percents 0%
+
+    .admin-panel
+        .bg
+        header.admin
+            .admin__title
+                span.admin__title-text Панель администратора
+            a.admin__close(href='/') Вернуться на сайт
+
+        nav.admin-nav
+            li.admin-nav__item.active
+                a.admin-nav__link(href='javascript:;') Обо мне
+            li.admin-nav__item
+                a.admin-nav__link(href='javascript:;') Блог
+            li.admin-nav__item
+                a.admin-nav__link(href='javascript:;') Мои работы
+
+        section.admin__body
+            section.admin-about.admin-content.active
+
+                span.admin__block-title Страница ОБО МНЕ
+
+                form.admin-about__form(name='skills' id='skills' method='POST' action='/admin/skills')
+
+                    ul.admin-about__teh-list
+                        each item in skills
+                            li.admin-about__teh-item.front(data-cat=`${item.category}`)
+                                span.admin-about__teh-title= item.category
+                                ul.front__list
+                                    each skill in item.items
+                                        li.front__item
+                                            label.admin-about__form-label= skill.name
+                                            input.admin-about__form-input(type='text' value=`${skill.value}` name=`${skill.name}` required)
+
+                    input.admin-about__form-submit(type='submit' value='Сохранить')
+
+            section.admin-blog.admin-content
+
+                span.admin__block-title Страница БЛОГ
+
+                form.admin-blog__form(name='blog' id='articles' method='POST' action='/admin/articles')
+                    label.admin-blog__form-label Добавить запись
+                    input.admin-blog__form-input(type='text' name='name' placeholder='Название')
+                    input.admin-blog__form-input(type='text' name='date' placeholder='xx.xx.xxxx')
+                    textarea.admin-blog__form-aria(type='text' name='text' placeholder='Содержание')
+
+                    input.admin-blog__form-submit(type='submit' value='Добавить')
+
+            section.admin-works.admin-content
+
+                span.admin__block-title Страница МОИ РАБОТЫ
+
+                form.admin-works__form(name='works' id='works' method='POST' enctype='multipart/form-data' action='/admin/works')
+                    label.admin-works__form-label Добавить работу
+                    input.admin-works__form-input(type='text' placeholder='Название проекта' name='name' required)
+                    input.admin-works__form-input(type='text' placeholder='Технологии' name='teh' required)
+                    input.admin-works__form-input(type='text' placeholder='Ссылка' name='link' required)
+                    input.admin-works__form-file(type='file' placeholder='Загрузка изображения' name='image' accept='image/*' required)
+
+                    input.admin-works__form-submit(type='submit' value='Добавить')

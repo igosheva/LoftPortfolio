@@ -43,10 +43,6 @@ router.post('/', isAdmin, function (req, res) {
           fs.rename(files.photo.path, files.photo.name);
         }
         var dir = config.upload.substr(config.upload.indexOf('/'));
-        // const item = new Model({name: fields.name, picture: path.join(dir, files.photo.name)});
-        // item.save().then(pic => {
-        //   res.json({status: 'Картинка успешно загружена'});
-        // });
 
         const item = new Model({name: fields.name});
         item.save().then(pic => {

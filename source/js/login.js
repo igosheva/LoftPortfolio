@@ -1,6 +1,6 @@
 //---- block Login
 
-const formLogin = document.querySelector('#login');
+const formLogin = document.querySelector('#authorization');
 
 if (formLogin) {
   formLogin.addEventListener('submit', prepareAuth);
@@ -14,7 +14,7 @@ function prepareAuth(e) {
     password: formLogin.password.value
   };
   resultContainer.innerHTML = 'Sending...';
-  sendAjaxJson('/login', data, function (data) {
+  sendAjaxJson('/', data, function (data) {
     resultContainer.innerHTML = data;
   });
 }

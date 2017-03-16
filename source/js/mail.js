@@ -1,5 +1,5 @@
 //------------ block mail
-const formMail = document.querySelector('#mail');
+const formMail = document.querySelector('#feedbackForm');
 
 if (formMail) {
   formMail.addEventListener('submit', prepareSendMail);
@@ -14,7 +14,7 @@ function prepareSendMail(e) {
     text: formMail.text.value
   };
   resultContainer.innerHTML = 'Sending...';
-  sendAjaxJson('/contact', data, function (data) {
+  sendAjaxJson('/portfolio', data, function (data) {
     resultContainer.innerHTML = data;
   });
 }

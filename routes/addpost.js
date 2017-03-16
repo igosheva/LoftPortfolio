@@ -13,7 +13,7 @@ const isAdmin = (req, res, next) => {
   res.redirect('/');
 };
 
-router.get('/', isAdmin, function (req, res) {
+router.get('/', /*isAdmin, */function (req, res) {
   var obj = {
     title: 'Добавить запись блога'
   };

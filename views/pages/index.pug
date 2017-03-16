@@ -35,18 +35,19 @@ block content
                                 in: 'https://github.com/igosheva'
                             })
                         +nav('nav-welcome', {
-                            'Мои работы': './portfolio.html',
-                            'Обо мне': './about.html',
-                            'Блог': './blog.html'
+                            'Мои работы': './portfolio',
+                            'Обо мне': './about',
+                            'Блог': './blog'
                         })
-                    form.l-card__authorization#authorization(method='post', action='')
+                    form.l-card__authorization#authorization(method='POST', action='login')
                         .l-card__content
                             +blockTitle('Авторизуйтесь', 'authorization')
                             .c-authorization-form__validation#validation1
+                            .status
                             .c-authorization-form
                                 .c-authorization-form__item
                                     label.c-authorization-form__lebel
-                                        input.c-authorization-form__input(name='text', type='text', placeholder='Логин', required)
+                                        input.c-authorization-form__input(name='login', type='text', placeholder='Логин', required)
                                 .c-authorization-form__item
                                     label.c-authorization-form__lebel
                                         input.c-authorization-form__input(name='password', type='password', placeholder='Пароль', required)
@@ -63,9 +64,3 @@ block content
                                     input.nav-welcome__link(type='submit', value='Войти')
             footer.l-welcome__footer
                 p © Игошева Анастасия | создано с любовью в LoftSchool | 2017
-    ul
-        each index in items
-            figure
-                figcaption= index.name
-                p
-                    img(src=`${index.picture}`)

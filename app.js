@@ -26,6 +26,8 @@ mongoose.connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name
 require('./models/blog');
 require('./models/pic');
 require('./models/user');
+require('./models/skills');
+require('./models/portfolio');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -51,10 +53,10 @@ app.use(session({
 }));
 
 app.use('/', require('./routes/index'));
-app.use('/upload', require('./routes/upload'));
-app.use('/contact', require('./routes/mail'));
-app.use('/addpost', require('./routes/addpost'));
-app.use('/login', require('./routes/login'));
+app.use('/portfolio', require('./routes/portfolio'));
+app.use('/about', require('./routes/about'));
+app.use('/blog', require('./routes/blog'));
+app.use('/admin', require('./routes/admin'));
 
 // 404 catch-all handler (middleware)
 app.use(function (req, res, next) {
