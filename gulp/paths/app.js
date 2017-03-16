@@ -12,5 +12,6 @@ module.exports = [
   './source/js/blur.js',
   './source/js/feedback-form.js',
   './source/js/blog.js',
-  './source/js/mail.js'
+  './source/js/mail.js',
+  './source/js/login.js'
 ];

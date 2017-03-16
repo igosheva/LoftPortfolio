@@ -1,8 +1,15 @@
 {
-  "upload":"./upload",
+  "upload":"public/upload",
   "mail": {
     "subject": "Сообщение с сайта-портфолио",
     "user": "igosheva.spb@gmail.com",
     "pass": "ivushkakorka116"
+  },
+  "db": {
+    "host": "localhost",
+    "port": "27017",
+    "name": "test",
+    "user": "",
+    "password": ""
   }
 }

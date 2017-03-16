@@ -5,8 +5,8 @@ block content
 
 
   ul.article-wrap
-      each index in db
+      each index in items
           li.article
-            .article__title= index.title
-            .article__data= index.data
-            .article__text= index.body
+              .article__title= index.title
+              .article__data= index.date
+              .article__text= index.body

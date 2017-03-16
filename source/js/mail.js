@@ -14,12 +14,12 @@ function prepareSendMail(e) {
     text: formMail.text.value
   };
   resultContainer.innerHTML = 'Sending...';
-  sendMailData('/contact', data, function (data) {
+  sendAjaxJson('/contact', data, function (data) {
     resultContainer.innerHTML = data;
   });
 }
 
-function sendMailData(url, data, cb) {
+function sendAjaxJson(url, data, cb) {
   var xhr = new XMLHttpRequest();
   xhr.open('POST', url, true);
   xhr.setRequestHeader('Content-Type', 'application/json');
@@ -28,4 +28,26 @@ function sendMailData(url, data, cb) {
     cb(result.status);
   };
   xhr.send(JSON.stringify(data));
+}
+
+//---- block Blog
+
+const formBlog = document.querySelector('#blog');
+
+if (formBlog) {
+  formBlog.addEventListener('submit', prepareSendPost);
+}
+
+function prepareSendPost(e) {
+  e.preventDefault();
+  var resultContainer = document.querySelector('.status');
+  var data = {
+    title: formBlog.title.value,
+    date: formBlog.date.value,
+    text: formBlog.text.value
+  };
+  resultContainer.innerHTML = 'Sending...';
+  sendAjaxJson('/addpost', data, function (data) {
+    resultContainer.innerHTML = data;
+  });
 }

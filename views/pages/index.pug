@@ -63,3 +63,9 @@ block content
                                     input.nav-welcome__link(type='submit', value='Войти')
             footer.l-welcome__footer
                 p © Игошева Анастасия | создано с любовью в LoftSchool | 2017
+    ul
+        each index in items
+            figure
+                figcaption= index.name
+                p
+                    img(src=`${index.picture}`)
